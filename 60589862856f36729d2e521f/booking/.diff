@@ -1,0 +1,422 @@
+diff -rdBEZN ../../../Scenarios/booking/low_debt/booking/BasicRoom.java .submission/booking/BasicRoom.java
+0a1,75
+> package booking;
+> 
+> import java.time.LocalDateTime;
+> import java.util.LinkedList;
+> import java.util.List;
+> import java.util.Objects;
+> import java.util.Optional;
+> 
+> public class BasicRoom implements Room {
+>     private final String name;
+>     private final String description;
+> 
+>     private final List<Booking> bookings = new LinkedList<>();
+> 
+>     public BasicRoom(String name, String description) {
+>         this.name = name;
+>         this.description = description;
+>     }
+> 
+> 
+> 	@Override
+>     public String getName() {
+>         return this.name;
+>     }
+> 
+> 	@Override
+>     public String getDescription() {
+>         return this.description;
+>     }
+>     
+>     @Override
+>     public boolean hasProjector() {
+>         return false;
+>     }
+>     
+>     @Override
+>     public boolean hasWhiteboard() {
+>         return false;
+>     }
+> 
+> 	@Override
+>     public List<Booking> getBookings() {
+>         return List.copyOf(this.bookings);
+>     }
+> 
+>     private boolean available(Interval interval) {
+>         for (Booking booking : this.getBookings()) {
+>             if (booking.getInterval().overlapsWith(interval)) {
+>                 return false;
+>             }
+>         }
+> 
+>         return true;
+>     }
+> 
+>     /*
+>     Makes sure that the booking is valid and that the room is available.
+>      */
+>     @Override
+>     public Optional<Booking> book(Interval interval, User customer) {
+>         if (
+>             !this.available(interval) 
+>             || interval.getEnd().isBefore(interval.getStart())
+>             || interval.getStart().isBefore(LocalDateTime.now())
+>         ) {
+>             return Optional.empty();
+>         }
+> 
+>         Booking booking = new Booking(interval, customer);
+>         bookings.add(booking);
+> 
+>         return Optional.of(booking);
+>     }
+> }
+> 
+diff -rdBEZN ../../../Scenarios/booking/low_debt/booking/ClassRoom.java .submission/booking/ClassRoom.java
+6a7
+> import java.util.List;
+8c9
+< public class ClassRoom extends Room {
+---
+> public class ClassRoom implements Room {
+10a12
+>     private final Room inner;
+12,13c14,15
+<     public ClassRoom(String name, String description, boolean hasProjector) {
+<         super(name, description);
+---
+>     public ClassRoom(Room inner, boolean hasProjector) {
+>         this.inner = inner;
+16a19,29
+>     @Override
+> 	public String getName() {
+> 		return inner.getName();
+> 	}
+> 
+>     @Override
+> 	public String getDescription() {
+> 		return inner.getDescription();
+> 	}
+> 
+> 	@Override
+18c31
+<         return this.hasProjector;
+---
+>         return this.hasProjector || inner.hasProjector();
+20a34,44
+> 
+>     @Override
+>     public boolean hasWhiteboard() {
+>         return inner.hasWhiteboard();
+>     }
+> 
+>     @Override
+> 	public List<Booking> getBookings() {
+> 		return inner.getBookings();
+> 	}
+> 
+42,53c66
+<         return super.book(new Interval(bookingStart, bookingEnd), customer);
+<     }
+< 
+<     @Override
+<     public boolean equals(Object o) {
+<         return super.equals(o)
+<             && Objects.equals(this.hasProjector(), ((ClassRoom) o).hasProjector());
+<     }
+< 
+<     @Override
+<     public int hashCode() {
+<         return Objects.hash(super.hashCode(), this.hasProjector());
+---
+>         return inner.book(new Interval(bookingStart, bookingEnd), customer);
+diff -rdBEZN ../../../Scenarios/booking/low_debt/booking/ComputerClassRoom.java .submission/booking/ComputerClassRoom.java
+0a1,60
+> package booking;
+> 
+> import java.util.Optional;
+> import java.util.List;
+> 
+> public class ComputerClassRoom implements Room {
+> 
+>     private final Room inner;
+> 
+>     public ComputerClassRoom(
+>     	String name, 
+>     	String description, 
+>     	boolean hasProjector, 
+>     	int opensAt, 
+>     	int closesAt
+> 	) {
+>         this.inner = new ClassRoom(
+>         	new ComputerRoom(
+>         		new BasicRoom(name, description),
+>         		opensAt,
+>         		closesAt
+>     		),
+>     		hasProjector
+> 		);
+>     }
+>     
+>     @Override
+> 	public String getName() {
+> 		return inner.getName();
+> 	}
+> 
+>     @Override
+> 	public String getDescription() {
+> 		return inner.getDescription();
+> 	}
+> 
+> 	@Override
+>     public boolean hasProjector() {
+>         return inner.hasProjector();
+>     }
+>     
+> 
+>     @Override
+>     public boolean hasWhiteboard() {
+>         return inner.hasWhiteboard();
+>     }
+> 
+>     @Override
+> 	public List<Booking> getBookings() {
+> 		return inner.getBookings();
+> 	}
+> 
+>     /*
+>     Only allows bookings that start on the hour between the opening hours. (Floors second and microsecond values).
+>     */
+>     @Override
+>     public Optional<Booking> book(Interval interval, User customer) {
+>         return inner.book(interval, customer);
+>     }
+> }
+diff -rdBEZN ../../../Scenarios/booking/low_debt/booking/ComputerRoom.java .submission/booking/ComputerRoom.java
+0a1,59
+> package booking;
+> 
+> import java.time.LocalDateTime;
+> import java.util.Objects;
+> import java.util.Optional;
+> import java.util.List;
+> 
+> public class ComputerRoom implements Room {
+> 
+>     private final int opensAt;
+>     private final int closesAt;
+>     private final Room inner;
+>     
+>     public ComputerRoom(Room inner, int opensAt, int closesAt) {
+>         this.inner = inner;
+>         this.opensAt = opensAt;
+>         this.closesAt = closesAt;
+>     }
+> 
+>     @Override
+> 	public String getName() {
+> 		return inner.getName();
+> 	}
+> 
+>     @Override
+> 	public String getDescription() {
+> 		return inner.getDescription();
+> 	}
+> 
+>     @Override
+>     public boolean hasWhiteboard() {
+>         return inner.hasWhiteboard();
+>     }
+> 
+>     @Override
+> 	public boolean hasProjector() {
+> 		return inner.hasProjector();
+> 	}
+> 	
+>     @Override
+> 	public List<Booking> getBookings() {
+> 		return inner.getBookings();
+> 	}
+> 
+>     /*
+>     Is only available during a specified period of time each day
+>      */
+>     @Override
+>     public Optional<Booking> book(Interval interval, User customer) {
+>         int startHour = interval.getStart().getHour();
+>         int endHour = interval.getEnd().getHour();
+>         
+>         if (startHour < this.opensAt || endHour > this.closesAt) {
+>         	return Optional.empty();
+>         }
+>         
+>         return inner.book(interval, customer);
+>     }
+> }
+diff -rdBEZN ../../../Scenarios/booking/low_debt/booking/GroupRoom.java .submission/booking/GroupRoom.java
+5a6
+> import java.util.List;
+7c8
+< public class GroupRoom extends Room {
+---
+> public class GroupRoom implements Room {
+9a11
+>     private final Room inner;
+11,12c13,14
+<     public GroupRoom(String name, String description, boolean hasWhiteboard) {
+<         super(name, description);
+---
+>     public GroupRoom(Room inner, boolean hasWhiteboard) {
+>         this.inner = inner;
+15a18,28
+>     @Override
+> 	public String getName() {
+> 		return inner.getName();
+> 	}
+> 
+>     @Override
+> 	public String getDescription() {
+> 		return inner.getDescription();
+> 	}
+> 
+>     @Override
+17c30
+<         return this.hasWhiteboard;
+---
+>         return this.hasWhiteboard || inner.hasWhiteboard();
+19a33,42
+>     @Override
+> 	public boolean hasProjector() {
+> 		return inner.hasProjector();
+> 	}
+> 	
+>     @Override
+> 	public List<Booking> getBookings() {
+> 		return inner.getBookings();
+> 	}
+> 
+34,45c57
+<         return super.book(interval, customer);
+<     }
+< 
+<     @Override
+<     public boolean equals(Object o) {
+<         return super.equals(o)
+<             && Objects.equals(this.hasWhiteboard(), ((GroupRoom) o).hasWhiteboard());
+<     }
+< 
+<     @Override
+<     public int hashCode() {
+<         return Objects.hash(super.hashCode(), this.hasWhiteboard());
+---
+>         return inner.book(interval, customer);
+diff -rdBEZN ../../../Scenarios/booking/low_debt/booking/Main.java .submission/booking/Main.java
+14c14
+<     private static final ClassRoom classRoom = new ClassRoom("HB2", " at Hörsalsvägen 2", true);
+---
+>     private static final ClassRoom classRoom = new ClassRoom(new BasicRoom("HB2", " at Horsalsvagen 2"), true);
+16c16
+<     private static final GroupRoom groupRoom = new GroupRoom("J317", "in Jupiter", true);
+---
+>     private static final GroupRoom groupRoom = new GroupRoom(new BasicRoom("J317", "in Jupiter"), true);
+diff -rdBEZN ../../../Scenarios/booking/low_debt/booking/Room.java .submission/booking/Room.java
+3,6d2
+< import java.time.LocalDateTime;
+< import java.util.LinkedList;
+< import java.util.List;
+< import java.util.Objects;
+7a4
+> import java.util.List;
+9,72c6,8
+< public class Room {
+<     private final String name;
+<     private final String description;
+< 
+<     private final List<Booking> bookings = new LinkedList<>();
+< 
+<     protected Room(String name, String description) {
+<         this.name = name;
+<         this.description = description;
+<     }
+< 
+<     public String getName() {
+<         return this.name;
+<     }
+< 
+<     public String getDescription() {
+<         return this.description;
+<     }
+< 
+<     public List<Booking> getBookings() {
+<         return List.copyOf(this.bookings);
+<     }
+< 
+<     private boolean available(Interval interval) {
+<         for (Booking booking : this.getBookings()) {
+<             if (booking.getInterval().overlapsWith(interval)) {
+<                 return false;
+<             }
+<         }
+< 
+<         return true;
+<     }
+< 
+<     /*
+<     Makes sure that the booking is valid and that the room is available.
+<      */
+<     public Optional<Booking> book(Interval interval, User customer) {
+<         if (
+<             !this.available(interval) 
+<             || interval.getEnd().isBefore(interval.getStart())
+<             || interval.getStart().isBefore(LocalDateTime.now())
+<         ) {
+<             return Optional.empty();
+<         }
+< 
+<         Booking booking = new Booking(interval, customer);
+<         bookings.add(booking);
+< 
+<         return Optional.of(booking);
+<     }
+< 
+<     @Override
+<     public boolean equals(Object o) {
+<         if (this == o) {
+<             return true;
+<         }
+<         
+<         if (o == null || this.getClass() != o.getClass()) {
+<             return false;
+<         }
+< 
+<         Room room = (Room) o;
+<         return Objects.equals(this.getName(), room.getName());
+<     }
+---
+> public interface Room {
+> 	String getName();
+> 	String getDescription();
+74,77c10,11
+<     @Override
+<     public int hashCode() {
+<         return Objects.hash(this.getName());
+<     }
+---
+> 	boolean hasProjector();
+> 	boolean hasWhiteboard();
+79,87c13,14
+<     @Override
+<     public String toString() {
+<         return String.format(
+<                 "Room %s \"%s\" #bookings: %s",
+<                 this.getName(),
+<                 this.getDescription(),
+<                 this.getBookings().size()
+<         );
+<     }
+---
+> 	Optional<Booking> book(Interval interval, User customer);
+> 	List<Booking> getBookings();

@@ -1,0 +1,50 @@
+{
+    "task_completion": "Completed",
+    "reused_logic_constructor": true,
+    "reused_logic_validation": true,
+    "reused_logic_equals": true,
+    "reused_logic_hashcode": true,
+    "copied_variable_names_all": [
+        "name",
+        "description",
+        "projector",
+        "i",
+        "u",
+        "bs",
+        "i",
+        "u",
+        "o"
+    ],
+    "copied_variable_names_bad": [
+        "i",
+        "u",
+        "bs",
+        "i",
+        "u"
+    ],
+    "new_variable_names_all": [
+        "openingHour",
+        "closingHour",
+        "openingHour",
+        "closingHour"
+    ],
+    "new_variable_names_bad": [],
+    "edited_variable_names_all": [
+        "name",
+        "description",
+        "projector",
+        "projector",
+        "name",
+        "description",
+        "whiteboard",
+        "name",
+        "description",
+        "whiteboard"
+    ],
+    "edited_variable_names_bad": [],
+    "has_equals": false,
+    "has_hashcode": false,
+    "documentation_state": "Correct",
+    "large_structure_change": true,
+    "inspection_done": true
+}

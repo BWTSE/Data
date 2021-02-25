@@ -1,0 +1,48 @@
+{
+    "task_completion": "Completed",
+    "reused_logic_constructor": false,
+    "reused_logic_validation": false,
+    "reused_logic_equals": false,
+    "reused_logic_hashcode": false,
+    "copied_variable_names_all": [
+        "n",
+        "p",
+        "zs",
+        "vs",
+        "n",
+        "p",
+        "zs",
+        "vs",
+        "t",
+        "u",
+        "o",
+        "tt"
+    ],
+    "copied_variable_names_bad": [
+        "n",
+        "p",
+        "zs",
+        "vs",
+        "n",
+        "p",
+        "zs",
+        "vs",
+        "t",
+        "u",
+        "tt"
+    ],
+    "new_variable_names_all": [
+        "uos",
+        "userOccupationSet"
+    ],
+    "new_variable_names_bad": [
+        "uos"
+    ],
+    "edited_variable_names_all": [],
+    "edited_variable_names_bad": [],
+    "has_equals": true,
+    "has_hashcode": true,
+    "documentation_state": "Correct",
+    "large_structure_change": false,
+    "inspection_done": true
+}

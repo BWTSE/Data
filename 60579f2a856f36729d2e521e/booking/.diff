@@ -1,0 +1,118 @@
+diff -rdBEZN ../../../Scenarios/booking/high_debt/booking/ClassRoom.java .submission/booking/ClassRoom.java
+12,13c12,13
+<     private final String n;
+<     private final String d;
+---
+>     private final String name;
+>     private final String description;
+15c15
+<     private final List<Booking> bs = new LinkedList<>();
+---
+>     private final List<Booking> bookings = new LinkedList<>();
+17c17
+<     private boolean p;
+---
+>     private boolean hasProjector;
+19,22c19,22
+<     public ClassRoom(String n, String d, boolean p) {
+<         this.n = n;
+<         this.d = d;
+<         this.p = p;
+---
+>     public ClassRoom(String name, String description, boolean hasProjector) {
+>         this.name = name;
+>         this.description = description;
+>         this.hasProjector = hasProjector;
+26c26
+<         return this.n;
+---
+>         return this.name;
+30c30
+<         return this.d;
+---
+>         return this.description;
+34c34
+<         return this.p;
+---
+>         return this.hasProjector;
+38c38
+<         return List.copyOf(this.bs);
+---
+>         return List.copyOf(this.bookings);
+41,43c41,43
+<     private boolean available(Interval i) {
+<         for (Booking b : this.getBookings()) {
+<             if (b.getInterval().overlapsWith(i)) {
+---
+>     private boolean available(Interval interval) {
+>         for (Booking booking : this.getBookings()) {
+>             if (booking.getInterval().overlapsWith(interval)) {
+55c55
+<     public Optional<Booking> book(Interval i, User u) {
+---
+>     public Optional<Booking> book(Interval interval, User user) {
+57,60c57,60
+<             i.getStart().with(ChronoField.HOUR_OF_DAY, 0).isAfter(i.getEnd())
+<             || !available(i)
+<             || !startAndEndAtHour(i)
+<             || !startBeforeEnd(i)
+---
+>             interval.getStart().with(ChronoField.HOUR_OF_DAY, 0).isAfter(interval.getEnd())
+>             || !available(interval)
+>             || !startAndEndAtHour(interval)
+>             || !startBeforeEnd(interval)
+65,66c65,66
+<         Booking b = new Booking(i, u);
+<         bs.add(b);
+---
+>         Booking booking = new Booking(interval, user);
+>         bookings.add(booking);
+68c68
+<         return Optional.of(b);
+---
+>         return Optional.of(booking);
+71,72c71,72
+<     private static boolean startBeforeEnd(Interval i) {
+<         return !(i.getEnd().isBefore(i.getStart()) || i.getStart().isBefore(LocalDateTime.now()));
+---
+>     private static boolean startBeforeEnd(Interval interval) {
+>         return !(interval.getEnd().isBefore(interval.getStart()) || interval.getStart().isBefore(LocalDateTime.now()));
+75,76c75,76
+<     private static boolean startAndEndAtHour(Interval i) {
+<         LocalDateTime bst = i.getStart()
+---
+>     private static boolean startAndEndAtHour(Interval interval) {
+>         LocalDateTime startAtHour = interval.getStart()
+80c80
+<         LocalDateTime bed = i.getEnd()
+---
+>         LocalDateTime endAtHour = interval.getEnd()
+84c84
+<         return !(bed.getMinute() != 0|| bed.with(ChronoField.HOUR_OF_DAY, 0).isAfter(bst));
+---
+>         return !(endAtHour.getMinute() != 0|| endAtHour.with(ChronoField.HOUR_OF_DAY, 0).isAfter(startAtHour));
+diff -rdBEZN ../../../Scenarios/booking/high_debt/booking/ComputerClassRoom.java .submission/booking/ComputerClassRoom.java
+0a1,23
+> package booking;
+> 
+> import java.util.Optional;
+> 
+> public class ComputerClassRoom extends ClassRoom {
+> 	private final int startHour;
+> 	private final int endHour;
+> 
+> 	public ComputerClassRoom(String name, String description, boolean hasProjector, int startHour, int endHour) {
+> 		super(name, description, hasProjector);
+>         this.startHour = startHour;
+>         this.endHour = endHour;
+>     }
+>     
+>     @Override
+>     public Optional<Booking> book(Interval interval, User user) {
+>     	// Know this doesn't work. Don't have more time to look trough documentation.
+>     	if (this.startHour <= interval.getStart() && this.endHour > interval.getEnd()) {
+>     		return super.book(interval, user);
+>     	}
+>     	return Optional.empty();
+>     }
+> }

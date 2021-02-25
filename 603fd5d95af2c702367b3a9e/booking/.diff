@@ -1,0 +1,61 @@
+diff -rdBEZN ../../../Scenarios/booking/low_debt/booking/ClassRoom.java .submission/booking/ClassRoom.java
+30c30
+<         LocalDateTime bookingEnd = interval.getStart()
+---
+>         LocalDateTime bookingEnd = interval.getEnd()
+34,38c34
+<         if (
+<             bookingStart.getMinute() != 0
+<             || bookingEnd.getMinute() != 0
+<             || bookingEnd.with(ChronoField.HOUR_OF_DAY, 0).isAfter(bookingStart)
+<         ) {
+---
+>         if (bookingIsNotValid(bookingStart, bookingEnd)) {
+42a39,44
+>     }
+>     
+>     public boolean bookingIsNotValid(LocalDateTime bookingStart, LocalDateTime bookingEnd){
+>     	return bookingStart.getMinute() != 0
+>             || bookingEnd.getMinute() != 0
+>             || bookingEnd.with(ChronoField.HOUR_OF_DAY, 0).isAfter(bookingStart);
+diff -rdBEZN ../../../Scenarios/booking/low_debt/booking/ComputerClassRoom.java .submission/booking/ComputerClassRoom.java
+0a1,39
+> package booking;
+> 
+> import java.time.LocalDateTime;
+> import java.util.Objects;
+> 
+> public class ComputerClassRoom extends ClassRoom {
+> 	private final int openingHour;
+> 	private final int closingHour;
+> 	
+> 	public ComputerClassRoom(String name, String description, boolean hasProjector, int openingHour, int closingHour){
+> 		super(name, description, hasProjector);
+> 		this.openingHour = openingHour;
+> 		this.closingHour = closingHour;
+> 	}
+> 	
+> 	@Override
+> 	public boolean bookingIsNotValid(LocalDateTime bookingStart, LocalDateTime bookingEnd){
+> 		return super.bookingIsNotValid(bookingStart, bookingEnd) ||  this.getOpeningHour() > bookingStart.getHour() || this.getClosingHour() < bookingEnd.getHour();
+> 	}
+> 	
+> 	
+> 	public int getOpeningHour(){
+> 		return this.openingHour;
+> 	}
+> 	
+> 	public int getClosingHour(){
+> 		return this.closingHour;
+> 	}
+> 	
+> 	@Override
+>     public boolean equals(Object o) {
+>         return super.equals(o) && this.getOpeningHour() == ((ComputerClassRoom)o).getOpeningHour()  && this.getClosingHour() == ((ComputerClassRoom)o).getClosingHour();
+>     }
+> 
+>     @Override
+>     public int hashCode() {
+>         return Objects.hash(super.hashCode(), this.getOpeningHour(), this.getClosingHour());
+>     }
+> }

@@ -1,0 +1,101 @@
+diff -rdBEZN ../../../Scenarios/booking/low_debt/booking/ClassRoom.java .submission/booking/ClassRoom.java
+26,32c26
+<         LocalDateTime bookingStart = interval.getStart()
+<             .with(ChronoField.SECOND_OF_MINUTE, 0)
+<             .with(ChronoField.NANO_OF_SECOND, 0);
+< 
+<         LocalDateTime bookingEnd = interval.getEnd()
+<             .with(ChronoField.SECOND_OF_MINUTE, 0)
+<             .with(ChronoField.NANO_OF_SECOND, 0);
+---
+>         Interval adjustedInterval = adjustInterval(interval);
+35,37c29,31
+<             bookingStart.getMinute() != 0
+<             || bookingEnd.getMinute() != 0
+<             || bookingEnd.with(ChronoField.HOUR_OF_DAY, 0).isAfter(bookingStart)
+---
+>                 adjustedInterval.getStart().getMinute() != 0
+>                         || adjustedInterval.getEnd().getMinute() != 0
+>                         || adjustedInterval.getEnd().with(ChronoField.HOUR_OF_DAY, 0).isAfter(adjustedInterval.getStart())
+42c36,53
+<         return super.book(new Interval(bookingStart, bookingEnd), customer);
+---
+>         return super.book(adjustedInterval, customer);
+>     }
+> 
+>     /**
+>      * Adjust a classroom booking interval
+>      * @param interval requested interval
+>      * @return adjusted interval
+>      */
+>     protected Interval adjustInterval(Interval interval) {
+>         LocalDateTime bookingStart = interval.getStart()
+>                 .with(ChronoField.SECOND_OF_MINUTE, 0)
+>                 .with(ChronoField.NANO_OF_SECOND, 0);
+> 
+>         LocalDateTime bookingEnd = interval.getEnd()
+>                 .with(ChronoField.SECOND_OF_MINUTE, 0)
+>                 .with(ChronoField.NANO_OF_SECOND, 0);
+> 
+>         return new Interval(bookingStart, bookingEnd);
+48c59
+<             && Objects.equals(this.hasProjector(), ((ClassRoom) o).hasProjector());
+---
+>                 && Objects.equals(this.hasProjector(), ((ClassRoom) o).hasProjector());
+diff -rdBEZN ../../../Scenarios/booking/low_debt/booking/ComputerClassRoom.java .submission/booking/ComputerClassRoom.java
+0a1,29
+> package booking;
+> 
+> import java.time.LocalTime;
+> import java.util.Optional;
+> 
+> public class ComputerClassRoom extends ClassRoom {
+>     private final LocalTime startBookable;
+>     private final LocalTime endBookable;
+> 
+>     public ComputerClassRoom(String name, String description, boolean hasProjector, int firstBookableHour, int lastBookableHour) {
+>         super(name, description, hasProjector);
+>         this.startBookable = LocalTime.of(firstBookableHour, 0);
+>         this.endBookable = LocalTime.of(lastBookableHour, 0);
+>     }
+> 
+>     /*
+>     Only allows bookings within the bookable interval.
+>     */
+>     @Override
+>     public Optional<Booking> book(Interval interval, User customer) {
+>         Interval adjustedInterval = adjustInterval(interval);
+>         if (adjustedInterval.getStart().toLocalTime().isBefore(startBookable)
+>             || adjustedInterval.getEnd().toLocalTime().isAfter(endBookable)) {
+>             return Optional.empty();
+>         }
+> 
+>         return super.book(adjustedInterval, customer);
+>     }
+> }
+diff -rdBEZN ../../../Scenarios/booking/low_debt/booking/Main.java .submission/booking/Main.java
+65a66,89
+>         testTime = LocalDateTime.of(2021, 6, 2, 6, 59, 0);
+>         compRoomBooking = computerRoom.book(new Interval(testTime, testTime.withHour(17)), bob);
+>         if (compRoomBooking.isPresent()) {
+>             System.out.println("A computer room was successfully booked outside of allowed hours, this should not be possible");
+>         }
+> 
+>         testTime = LocalDateTime.of(2021, 6, 3, 7, 0, 0);
+>         compRoomBooking = computerRoom.book(new Interval(testTime, testTime.withHour(18)), bob);
+>         if (compRoomBooking.isPresent()) {
+>             System.out.println("A computer room was successfully booked outside of allowed hours, this should not be possible");
+>         }
+> 
+>         testTime = LocalDateTime.of(2021, 6, 4, 7, 0, 0);
+>         compRoomBooking = computerRoom.book(new Interval(testTime, testTime.withHour(17).withSecond(1)), bob);
+>         if (compRoomBooking.isEmpty()) {
+>             System.out.println("Failed to book computer room during office allowed, this should be possible");
+>         }
+> 
+>         testTime = LocalDateTime.of(2021, 6, 5, 7, 0, 0);
+>         compRoomBooking = computerRoom.book(new Interval(testTime, testTime.withHour(17)), bob);
+>         if (compRoomBooking.isEmpty()) {
+>             System.out.println("Failed to book computer room during office allowed, this should be possible");
+>         }
+>         

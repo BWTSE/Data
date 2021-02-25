@@ -1,0 +1,32 @@
+{
+    "task_completion": "Completed",
+    "reused_logic_constructor": false,
+    "reused_logic_validation": false,
+    "reused_logic_equals": false,
+    "reused_logic_hashcode": false,
+    "copied_variable_names_all": [
+        "validSeason",
+        "name",
+        "price",
+        "validZones",
+        "validSeason",
+        "trip",
+        "user",
+        "o"
+    ],
+    "copied_variable_names_bad": [],
+    "new_variable_names_all": [
+        "validOccupations",
+        "validOccupations",
+        "equalSeason",
+        "equalOccupations"
+    ],
+    "new_variable_names_bad": [],
+    "edited_variable_names_all": [],
+    "edited_variable_names_bad": [],
+    "has_equals": true,
+    "has_hashcode": true,
+    "documentation_state": "Incorrect",
+    "large_structure_change": false,
+    "inspection_done": true
+}

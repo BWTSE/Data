@@ -1,0 +1,15 @@
+{
+    "signup_code": "lock-cable",
+    "background_answers": {
+        "education_level": "Some master studies",
+        "education_field": "Software Engineering/Computer Science",
+        "work_experience": "7",
+        "work_experience_java": "2",
+        "work_domain": "devops",
+        "workplace_peer_review": true,
+        "workplace_pair_programming": false,
+        "workplace_td_tracking": false,
+        "workplace_coding_standards": true
+    },
+    "repeat_of": ""
+}

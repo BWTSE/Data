@@ -1,0 +1,13 @@
+diff -rdBEZN ../../../Scenarios/booking/low_debt/booking/ClassRoom.java .submission/booking/ClassRoom.java
+30c30
+<         LocalDateTime bookingEnd = interval.getStart()
+---
+>         LocalDateTime bookingEnd = interval.getStart() // this looks like a mistake. Not sure if on purpose ;) 
+diff -rdBEZN ../../../Scenarios/booking/low_debt/booking/Main.java .submission/booking/Main.java
+7a8,12
+>
+73c78,79
+<             && classRoomBooking.get().getInterval().getStart().getMinute() != 0
+---
+>             && classRoomBooking.get().getInterval().getStart().getMinute() != 0 // this should probably really test the end time too. 
+>             // This way you are missing the bug in the implementation

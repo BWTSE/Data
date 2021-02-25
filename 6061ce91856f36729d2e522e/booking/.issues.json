@@ -1,0 +1,1570 @@
+[
+    {
+        "rule": "java:S1228",
+        "file": "booking-high-6061ce91856f36729d2e522e",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Add a 'package-info.java' file to document the '.submission/booking' package",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "Booking.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "13 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "Booking.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "15 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "java:S1451",
+        "file": "Booking.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "Booking.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 5
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 5
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 9
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 14
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Booking' looks like designed for extension (can be subclassed), but the method 'getInterval' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Booking' final or making the method 'getInterval' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 14
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 18
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Booking' looks like designed for extension (can be subclassed), but the method 'getBooker' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Booking' final or making the method 'getBooker' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 18
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 22
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Booking' looks like designed for extension (can be subclassed), but the method 'equals' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Booking' final or making the method 'equals' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 22
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 23
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 24
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 28
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 37
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Booking' looks like designed for extension (can be subclassed), but the method 'hashCode' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Booking' final or making the method 'hashCode' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 37
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 38
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 45
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Booking' looks like designed for extension (can be subclassed), but the method 'toString' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Booking' final or making the method 'toString' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 45
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Booking.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 46
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "ClassRoom.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "12 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "ClassRoom.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "13 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "java:S105",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Replace all tab characters in this file by sequences of white-spaces.",
+        "line": 0
+    },
+    {
+        "rule": "java:S1451",
+        "file": "ClassRoom.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Missing package-info.java file.",
+        "line": 1
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "ClassRoom.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "java:S1128",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Remove this unused import 'java.util.LinkedList'.",
+        "line": 5
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck",
+        "file": "ClassRoom.java",
+        "severity": "INFO",
+        "type": "CODE_SMELL",
+        "message": "Unused import - java.util.LinkedList.",
+        "line": 5
+    },
+    {
+        "rule": "java:S1128",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Remove this unused import 'java.util.List'.",
+        "line": 6
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck",
+        "file": "ClassRoom.java",
+        "severity": "INFO",
+        "type": "CODE_SMELL",
+        "message": "Unused import - java.util.List.",
+        "line": 6
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 10
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 10
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 14
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 19
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'ClassRoom' looks like designed for extension (can be subclassed), but the method 'hasProjector' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'ClassRoom' final or making the method 'hasProjector' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 19
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Block comment has incorrect indentation level 4, expected is 1, indentation should be the same level as line 27.",
+        "line": 23
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "File contains tab characters (this is the first instance).",
+        "line": 27
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 27
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'ClassRoom' looks like designed for extension (can be subclassed), but the method 'book' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'ClassRoom' final or making the method 'book' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 27
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 28
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 32
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 39
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 51
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'ClassRoom' looks like designed for extension (can be subclassed), but the method 'equals' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'ClassRoom' final or making the method 'equals' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 51
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 52
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 57
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'ClassRoom' looks like designed for extension (can be subclassed), but the method 'hashCode' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'ClassRoom' final or making the method 'hashCode' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 57
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 58
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "ComputerClassRoom.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "12 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "ComputerClassRoom.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "15 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "java:S105",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Replace all tab characters in this file by sequences of white-spaces.",
+        "line": 0
+    },
+    {
+        "rule": "java:S1451",
+        "file": "ComputerClassRoom.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "java:S1128",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Remove this unused import 'java.time.LocalDateTime'.",
+        "line": 3
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "INFO",
+        "type": "CODE_SMELL",
+        "message": "Unused import - java.time.LocalDateTime.",
+        "line": 3
+    },
+    {
+        "rule": "java:S1128",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Remove this unused import 'java.time.temporal.ChronoField'.",
+        "line": 4
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "INFO",
+        "type": "CODE_SMELL",
+        "message": "Unused import - java.time.temporal.ChronoField.",
+        "line": 4
+    },
+    {
+        "rule": "java:S1128",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Remove this unused import 'java.util.LinkedList'.",
+        "line": 5
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "INFO",
+        "type": "CODE_SMELL",
+        "message": "Unused import - java.util.LinkedList.",
+        "line": 5
+    },
+    {
+        "rule": "java:S1128",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Remove this unused import 'java.util.List'.",
+        "line": 6
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "INFO",
+        "type": "CODE_SMELL",
+        "message": "Unused import - java.util.List.",
+        "line": 6
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 10
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 10
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "File contains tab characters (this is the first instance).",
+        "line": 11
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 15
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "Line is longer than 100 characters (found 116).",
+        "line": 15
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 21
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'ComputerClassRoom' looks like designed for extension (can be subclassed), but the method 'getOpeningHour' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'ComputerClassRoom' final or making the method 'getOpeningHour' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 21
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 25
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'ComputerClassRoom' looks like designed for extension (can be subclassed), but the method 'getClosingHour' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'ComputerClassRoom' final or making the method 'getClosingHour' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 25
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Block comment has incorrect indentation level 4, expected is 1, indentation should be the same level as line 32.",
+        "line": 29
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 32
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'ComputerClassRoom' looks like designed for extension (can be subclassed), but the method 'book' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'ComputerClassRoom' final or making the method 'book' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 32
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 33
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 34
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 41
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 46
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'ComputerClassRoom' looks like designed for extension (can be subclassed), but the method 'equals' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'ComputerClassRoom' final or making the method 'equals' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 46
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 47
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 53
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'ComputerClassRoom' looks like designed for extension (can be subclassed), but the method 'hashCode' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'ComputerClassRoom' final or making the method 'hashCode' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 53
+    },
+    {
+        "rule": "java:S1106",
+        "file": "ComputerClassRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 54
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "GroupRoom.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "10 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "GroupRoom.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "11 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "java:S105",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Replace all tab characters in this file by sequences of white-spaces.",
+        "line": 0
+    },
+    {
+        "rule": "java:S1451",
+        "file": "GroupRoom.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "GroupRoom.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "java:S1128",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Remove this unused import 'java.util.LinkedList'.",
+        "line": 4
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck",
+        "file": "GroupRoom.java",
+        "severity": "INFO",
+        "type": "CODE_SMELL",
+        "message": "Unused import - java.util.LinkedList.",
+        "line": 4
+    },
+    {
+        "rule": "java:S1128",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Remove this unused import 'java.util.List'.",
+        "line": 5
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck",
+        "file": "GroupRoom.java",
+        "severity": "INFO",
+        "type": "CODE_SMELL",
+        "message": "Unused import - java.util.List.",
+        "line": 5
+    },
+    {
+        "rule": "java:S1106",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 9
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 9
+    },
+    {
+        "rule": "java:S1106",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 13
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "File contains tab characters (this is the first instance).",
+        "line": 14
+    },
+    {
+        "rule": "java:S1106",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 18
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'GroupRoom' looks like designed for extension (can be subclassed), but the method 'hasWhiteboard' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'GroupRoom' final or making the method 'hasWhiteboard' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 18
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 27
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'GroupRoom' looks like designed for extension (can be subclassed), but the method 'book' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'GroupRoom' final or making the method 'book' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 27
+    },
+    {
+        "rule": "java:S1106",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 28
+    },
+    {
+        "rule": "java:S1106",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 29
+    },
+    {
+        "rule": "java:S1106",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 35
+    },
+    {
+        "rule": "java:S1106",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 36
+    },
+    {
+        "rule": "java:S1106",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 37
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 45
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'GroupRoom' looks like designed for extension (can be subclassed), but the method 'equals' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'GroupRoom' final or making the method 'equals' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 45
+    },
+    {
+        "rule": "java:S1106",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 46
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 51
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'GroupRoom' looks like designed for extension (can be subclassed), but the method 'hashCode' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'GroupRoom' final or making the method 'hashCode' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 51
+    },
+    {
+        "rule": "java:S1106",
+        "file": "GroupRoom.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 52
+    },
+    {
+        "rule": "java:S1451",
+        "file": "Interval.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "Interval.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "15 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "Interval.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "17 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "Interval.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 7
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 7
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 11
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 16
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Interval' looks like designed for extension (can be subclassed), but the method 'getStart' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Interval' final or making the method 'getStart' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 16
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 20
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Interval' looks like designed for extension (can be subclassed), but the method 'getEnd' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Interval' final or making the method 'getEnd' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 20
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 24
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Interval' looks like designed for extension (can be subclassed), but the method 'isDuring' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Interval' final or making the method 'isDuring' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 24
+    },
+    {
+        "rule": "fb-contrib:OCP_OVERLY_CONCRETE_PARAMETER",
+        "file": "Interval.java",
+        "severity": "INFO",
+        "type": "CODE_SMELL",
+        "message": "booking.Interval.isDuring(LocalDateTime): 1st parameter '' could be declared as java.time.chrono.ChronoLocalDateTime instead",
+        "line": 25
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 28
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Interval' looks like designed for extension (can be subclassed), but the method 'overlapsWith' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Interval' final or making the method 'overlapsWith' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 28
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 34
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Interval' looks like designed for extension (can be subclassed), but the method 'equals' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Interval' final or making the method 'equals' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 34
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 35
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 36
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 40
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 49
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Interval' looks like designed for extension (can be subclassed), but the method 'hashCode' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Interval' final or making the method 'hashCode' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 49
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 50
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 54
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Interval' looks like designed for extension (can be subclassed), but the method 'toString' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Interval' final or making the method 'toString' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 54
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Interval.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 55
+    },
+    {
+        "rule": "java:S105",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Replace all tab characters in this file by sequences of white-spaces.",
+        "line": 0
+    },
+    {
+        "rule": "java:S1451",
+        "file": "Room.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "Room.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "20 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "Room.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "23 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "Room.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "java:S1128",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Remove this unused import 'java.time.temporal.ChronoField'.",
+        "line": 4
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck",
+        "file": "Room.java",
+        "severity": "INFO",
+        "type": "CODE_SMELL",
+        "message": "Unused import - java.time.temporal.ChronoField.",
+        "line": 4
+    },
+    {
+        "rule": "codehawk:InsufficientModularation",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "This class has InsufficientModularation, there should be over 20 public interfaces, eihther over 30 methods, or has complexity count over 100 times.",
+        "line": 10
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 10
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 10
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 17
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 22
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Room' looks like designed for extension (can be subclassed), but the method 'getName' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Room' final or making the method 'getName' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 22
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 26
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Room' looks like designed for extension (can be subclassed), but the method 'getDescription' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Room' final or making the method 'getDescription' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 26
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 30
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Room' looks like designed for extension (can be subclassed), but the method 'getBookings' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Room' final or making the method 'getBookings' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 30
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 34
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 35
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 36
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 43
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Room' looks like designed for extension (can be subclassed), but the method 'book' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Room' final or making the method 'book' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 43
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 44
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 54
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 58
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Room' looks like designed for extension (can be subclassed), but the method 'equals' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Room' final or making the method 'equals' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 58
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 59
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 65
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Room' looks like designed for extension (can be subclassed), but the method 'hashCode' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Room' final or making the method 'hashCode' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 65
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 66
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "File contains tab characters (this is the first instance).",
+        "line": 68
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 74
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Room' looks like designed for extension (can be subclassed), but the method 'toString' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Room' final or making the method 'toString' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 74
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Room.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 75
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "User.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "9 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "User.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "12 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "java:S1451",
+        "file": "User.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "User.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 5
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 5
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 10
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 15
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'User' looks like designed for extension (can be subclassed), but the method 'getName' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'User' final or making the method 'getName' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 15
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 19
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'User' looks like designed for extension (can be subclassed), but the method 'getEmail' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'User' final or making the method 'getEmail' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 19
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'User' looks like designed for extension (can be subclassed), but the method 'equals' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'User' final or making the method 'equals' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 23
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 23
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 24
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 25
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 29
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 37
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'User' looks like designed for extension (can be subclassed), but the method 'hashCode' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'User' final or making the method 'hashCode' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 37
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 38
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 42
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'User' looks like designed for extension (can be subclassed), but the method 'toString' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'User' final or making the method 'toString' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 42
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 43
+    }
+]

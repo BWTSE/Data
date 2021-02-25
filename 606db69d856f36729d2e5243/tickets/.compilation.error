@@ -1,0 +1,12 @@
+exit code: 1
+tickets/Main.java:28: error: cannot find symbol
+        new TicketTypeSeasonalRestricted("Retiree Winter Ticket", 199.0, z2, Season.WINTER, 
+            ^
+  symbol:   class TicketTypeSeasonalRestricted
+  location: class Main
+tickets/Main.java:33: error: cannot find symbol
+        new TicketTypeSeasonalRestricted( "Student Winter Ticket", 199.0, z3, Season.WINTER, 
+            ^
+  symbol:   class TicketTypeSeasonalRestricted
+  location: class Main
+2 errors

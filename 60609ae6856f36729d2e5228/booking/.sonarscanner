@@ -1,0 +1,263 @@
+INFO: Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: SonarScanner 4.5.0.2216
+INFO: Java 15.0.2 AdoptOpenJDK (64-bit)
+INFO: Linux 5.11.8-arch1-1 amd64
+INFO: User cache: /home/gurgy/.sonar/cache
+INFO: Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: Analyzing on SonarQube server 8.4.2
+INFO: Default locale: "en_US", source code encoding: "UTF-8" (analysis is platform dependent)
+INFO: Load global settings
+INFO: Load global settings (done) | time=437ms
+INFO: Server id: BF41A1F2-AXRis_C3qIKX52rsj1Qt
+INFO: User cache: /home/gurgy/.sonar/cache
+INFO: Load/download plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=93ms
+INFO: Load/download plugins (done) | time=157ms
+INFO: Process project properties
+INFO: Process project properties (done) | time=13ms
+INFO: Project key: booking-high-60609ae6856f36729d2e5228
+INFO: Base dir: /home/gurgy/Projects/RobotResearcher/submissions/60609ae6856f36729d2e5228/booking
+INFO: Working dir: /home/gurgy/Projects/RobotResearcher/submissions/60609ae6856f36729d2e5228/booking/.scannerwork
+INFO: Load project settings for component key: 'booking-high-60609ae6856f36729d2e5228'
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=156ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=2904ms
+INFO: Exclusions based on SCM info is disabled by configuration
+INFO: Indexing files...
+INFO: Project configuration:
+INFO:   Excluded sources: */Main.java
+INFO: 8 files indexed
+INFO: 0 files ignored because of inclusion/exclusion patterns
+INFO: Quality profile for java: All
+INFO: ------------- Run sensors on module booking-high-60609ae6856f36729d2e5228
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=58ms
+INFO: Sensor JavaSquidSensor [java]
+INFO: Configured Java source version (sonar.java.source): none
+INFO: JavaClasspath initialization
+WARN: Bytecode of dependencies was not provided for analysis of source files, you might end up with less precise results. Bytecode can be provided using sonar.java.libraries property.
+INFO: JavaClasspath initialization (done) | time=10ms
+INFO: JavaTestClasspath initialization
+INFO: JavaTestClasspath initialization (done) | time=0ms
+INFO: Java Main Files AST scan
+INFO: 8 source files to be analyzed
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=42ms
+n
+use in:getName
+d
+use in:getDescription
+bs
+use in:getBookings
+use in:book
+p
+use in:hasProjector
+getName
+use in:ClassRoom
+getDescription
+use in:ClassRoom
+getBookings
+use in:ClassRoom
+use in:ClassRoom
+book
+hasProjector
+use in:ClassRoom
+use in:ClassRoom
+use in:ClassRoom
+ClassRoom
+s
+use in:getStart
+e
+use in:getEnd
+getStart
+use in:Interval
+use in:Interval
+use in:Interval
+use in:Interval
+use in:Interval
+use in:Interval
+use in:Interval
+getEnd
+use in:Interval
+use in:Interval
+use in:Interval
+use in:Interval
+use in:Interval
+use in:Interval
+Interval
+openingTime
+use in:getOpeningTime
+use in:withinAllowedTimespan
+closingTime
+use in:getClosingTime
+use in:withinAllowedTimespan
+n
+use in:getName
+d
+use in:getDescription
+bs
+use in:getBookings
+use in:book
+p
+use in:hasProjector
+getOpeningTime
+use in:ComputerClassRoom
+use in:ComputerClassRoom
+use in:ComputerClassRoom
+withinAllowedTimespan
+use in:ComputerClassRoom
+getClosingTime
+use in:ComputerClassRoom
+use in:ComputerClassRoom
+use in:ComputerClassRoom
+getName
+use in:ComputerClassRoom
+getDescription
+use in:ComputerClassRoom
+getBookings
+use in:ComputerClassRoom
+use in:ComputerClassRoom
+book
+hasProjector
+ComputerClassRoom
+n
+use in:main
+use in:main
+u1
+use in:main
+use in:main
+u2
+use in:main
+use in:main
+use in:main
+use in:main
+use in:main
+use in:main
+r1
+use in:main
+use in:main
+r2
+use in:main
+use in:main
+r3
+use in:main
+rs
+use in:main
+main
+Main
+n
+use in:getName
+e
+use in:getEmail
+getName
+use in:User
+getEmail
+use in:User
+use in:User
+use in:User
+use in:User
+User
+n
+use in:getName
+d
+use in:getDescription
+w
+use in:hasWhiteboard
+bs
+use in:getBookings
+use in:book
+getName
+use in:GroupRoom
+getDescription
+use in:GroupRoom
+hasWhiteboard
+use in:GroupRoom
+use in:GroupRoom
+use in:GroupRoom
+getBookings
+use in:GroupRoom
+use in:GroupRoom
+use in:GroupRoom
+book
+GroupRoom
+i
+use in:getInterval
+u
+use in:getBooker
+getInterval
+use in:Booking
+use in:Booking
+use in:Booking
+use in:Booking
+getBooker
+use in:Booking
+use in:Booking
+use in:Booking
+use in:Booking
+Booking
+INFO: 8/8 source files have been analyzed
+INFO: Java Main Files AST scan (done) | time=3308ms
+INFO: Java Test Files AST scan
+INFO: 0 source files to be analyzed
+INFO: Java Test Files AST scan (done) | time=1ms
+INFO: 0/0 source files have been analyzed
+INFO: Java Generated Files AST scan
+INFO: 0 source files to be analyzed
+INFO: Java Generated Files AST scan (done) | time=0ms
+INFO: Sensor JavaSquidSensor [java] (done) | time=3495ms
+INFO: 0/0 source files have been analyzed
+INFO: Sensor FindBugs Sensor [findbugs]
+INFO: Loading findbugs plugin: /home/gurgy/Projects/RobotResearcher/submissions/60609ae6856f36729d2e5228/booking/.scannerwork/findbugs/sb-contrib.jar
+INFO: Loading findbugs plugin: /home/gurgy/Projects/RobotResearcher/submissions/60609ae6856f36729d2e5228/booking/.scannerwork/findbugs/findsecbugs-plugin.jar
+INFO: Findbugs output report: /home/gurgy/Projects/RobotResearcher/submissions/60609ae6856f36729d2e5228/booking/.scannerwork/findbugs-result.xml
+The following classes needed for analysis were missing:
+  makeConcatWithConstants
+INFO: Sensor FindBugs Sensor [findbugs] (done) | time=5351ms
+INFO: Sensor SurefireSensor [java]
+INFO: parsing [/home/gurgy/Projects/RobotResearcher/submissions/60609ae6856f36729d2e5228/booking/target/surefire-reports]
+INFO: Sensor SurefireSensor [java] (done) | time=2ms
+INFO: Sensor JavaXmlSensor [java]
+INFO: Sensor JavaXmlSensor [java] (done) | time=1ms
+INFO: Sensor CheckstyleSensor [checkstyle]
+INFO: Checkstyle output report: /home/gurgy/Projects/RobotResearcher/submissions/60609ae6856f36729d2e5228/booking/.scannerwork/checkstyle-result.xml
+INFO: Checkstyle configuration: /home/gurgy/Projects/RobotResearcher/submissions/60609ae6856f36729d2e5228/booking/.scannerwork/checkstyle.xml
+INFO: Checkstyle charset: UTF-8
+INFO: Sensor CheckstyleSensor [checkstyle] (done) | time=898ms
+INFO: ------------- Run sensors on project
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=8ms
+INFO: Sensor Java CPD Block Indexer
+INFO: Sensor Java CPD Block Indexer (done) | time=36ms
+INFO: SCM Publisher SCM provider for this project is: git
+INFO: SCM Publisher 8 source files to be analyzed
+INFO: SCM Publisher 0/8 source files have been analyzed (done) | time=272ms
+WARN: Missing blame information for the following files:
+WARN:   * .submission/booking/ClassRoom.java
+WARN:   * .submission/booking/Interval.java
+WARN:   * .submission/booking/ComputerClassRoom.java
+WARN:   * .submission/booking/Main.java
+WARN:   * .submission/booking/User.java
+WARN:   * .submission/booking/GroupRoom.java
+WARN:   * .submission/booking/Booking.java
+WARN:   * .submission/booking/Room.java
+WARN: This may lead to missing/broken features in SonarQube
+INFO: CPD Executor 1 file had no CPD blocks
+INFO: CPD Executor Calculating CPD for 7 files
+INFO: CPD Executor CPD calculation finished (done) | time=14ms
+INFO: Analysis report generated in 85ms, dir size=202 KB
+INFO: Analysis report compressed in 51ms, zip size=52 KB
+INFO: Analysis report uploaded in 360ms
+INFO: ANALYSIS SUCCESSFUL, you can browse https://sonarqube.sidus.io/dashboard?id=booking-high-60609ae6856f36729d2e5228
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at https://sonarqube.sidus.io/api/ce/task?id=AXh6P1Ip-3MEebgqC_-z
+INFO: Analysis total time: 14.637 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 17.487s
+INFO: Final Memory: 26M/100M
+INFO: ------------------------------------------------------------------------

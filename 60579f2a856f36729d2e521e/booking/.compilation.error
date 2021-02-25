@@ -1,0 +1,12 @@
+exit code: 1
+booking/ComputerClassRoom.java:18: error: bad operand types for binary operator '<='
+    	if (this.startHour <= interval.getStart() && this.endHour > interval.getEnd()) {
+    	                   ^
+  first type:  int
+  second type: LocalDateTime
+booking/ComputerClassRoom.java:18: error: bad operand types for binary operator '>'
+    	if (this.startHour <= interval.getStart() && this.endHour > interval.getEnd()) {
+    	                                                          ^
+  first type:  int
+  second type: LocalDateTime
+2 errors

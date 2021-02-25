@@ -1,0 +1,50 @@
+{
+    "task_completion": "Completed",
+    "reused_logic_constructor": false,
+    "reused_logic_validation": false,
+    "reused_logic_equals": false,
+    "reused_logic_hashcode": false,
+    "copied_variable_names_all": [
+        "n",
+        "d",
+        "p",
+        "bs",
+        "n",
+        "d",
+        "p",
+        "i",
+        "interval",
+        "booking",
+        "u",
+        "bst",
+        "bed",
+        "o"
+    ],
+    "copied_variable_names_bad": [
+        "n",
+        "d",
+        "p",
+        "bs",
+        "n",
+        "d",
+        "p",
+        "i",
+        "u",
+        "bst",
+        "bed"
+    ],
+    "new_variable_names_all": [
+        "start",
+        "end",
+        "start",
+        "end"
+    ],
+    "new_variable_names_bad": [],
+    "edited_variable_names_all": [],
+    "edited_variable_names_bad": [],
+    "has_equals": true,
+    "has_hashcode": true,
+    "documentation_state": "Incorrect",
+    "large_structure_change": false,
+    "inspection_done": true
+}

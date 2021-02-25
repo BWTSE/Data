@@ -1,0 +1,240 @@
+INFO: Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: SonarScanner 4.5.0.2216
+INFO: Java 15.0.2 AdoptOpenJDK (64-bit)
+INFO: Linux 5.11.2-arch1-1 amd64
+INFO: User cache: /home/gurgy/.sonar/cache
+INFO: Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: Analyzing on SonarQube server 8.4.2
+INFO: Default locale: "en_US", source code encoding: "UTF-8" (analysis is platform dependent)
+INFO: Load global settings
+INFO: Load global settings (done) | time=709ms
+INFO: Server id: BF41A1F2-AXRis_C3qIKX52rsj1Qt
+INFO: User cache: /home/gurgy/.sonar/cache
+INFO: Load/download plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=221ms
+INFO: Load/download plugins (done) | time=245ms
+INFO: Process project properties
+INFO: Process project properties (done) | time=5ms
+INFO: Project key: booking-high-6033c7315af2c702367b3a94
+INFO: Base dir: /home/gurgy/Projects/RobotResearcher/submissions/6033c7315af2c702367b3a94/booking
+INFO: Working dir: /home/gurgy/Projects/RobotResearcher/submissions/6033c7315af2c702367b3a94/booking/.scannerwork
+INFO: Load project settings for component key: 'booking-high-6033c7315af2c702367b3a94'
+INFO: Load project settings for component key: 'booking-high-6033c7315af2c702367b3a94' (done) | time=50ms
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=118ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=2773ms
+INFO: Exclusions based on SCM info is disabled by configuration
+INFO: Indexing files...
+INFO: Project configuration:
+INFO:   Excluded sources: */Main.java
+INFO: 8 files indexed
+INFO: 0 files ignored because of inclusion/exclusion patterns
+INFO: Quality profile for java: All
+INFO: ------------- Run sensors on module booking-high-6033c7315af2c702367b3a94
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=59ms
+INFO: Sensor JavaSquidSensor [java]
+INFO: Configured Java source version (sonar.java.source): none
+INFO: JavaClasspath initialization
+WARN: Bytecode of dependencies was not provided for analysis of source files, you might end up with less precise results. Bytecode can be provided using sonar.java.libraries property.
+INFO: JavaClasspath initialization (done) | time=6ms
+INFO: JavaTestClasspath initialization
+INFO: JavaTestClasspath initialization (done) | time=0ms
+INFO: Java Main Files AST scan
+INFO: 8 source files to be analyzed
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=61ms
+n
+use in:getName
+d
+use in:getDescription
+bs
+use in:getBookings
+use in:book
+p
+use in:hasProjector
+getName
+use in:ClassRoom
+getDescription
+use in:ClassRoom
+getBookings
+use in:ClassRoom
+use in:ClassRoom
+book
+hasProjector
+use in:ClassRoom
+use in:ClassRoom
+use in:ClassRoom
+ClassRoom
+s
+use in:getStart
+e
+use in:getEnd
+getStart
+use in:Interval
+use in:Interval
+use in:Interval
+use in:Interval
+use in:Interval
+use in:Interval
+use in:Interval
+getEnd
+use in:Interval
+use in:Interval
+use in:Interval
+use in:Interval
+use in:Interval
+use in:Interval
+Interval
+n
+use in:getName
+d
+use in:getDescription
+p
+use in:hasProjector
+hO
+hC
+bs
+use in:getBookings
+use in:book
+getName
+use in:ComputerClassRoom
+getDescription
+use in:ComputerClassRoom
+hasProjector
+use in:ComputerClassRoom
+use in:ComputerClassRoom
+getBookings
+use in:ComputerClassRoom
+use in:ComputerClassRoom
+use in:ComputerClassRoom
+book
+ComputerClassRoom
+n
+use in:main
+use in:main
+u1
+use in:main
+use in:main
+u2
+use in:main
+use in:main
+use in:main
+use in:main
+use in:main
+use in:main
+r1
+use in:main
+use in:main
+r2
+use in:main
+use in:main
+r3
+use in:main
+rs
+use in:main
+main
+Main
+n
+use in:getName
+e
+use in:getEmail
+getName
+use in:User
+getEmail
+use in:User
+use in:User
+use in:User
+use in:User
+User
+n
+use in:getName
+d
+use in:getDescription
+w
+use in:hasWhiteboard
+bs
+use in:getBookings
+use in:book
+getName
+use in:GroupRoom
+getDescription
+use in:GroupRoom
+hasWhiteboard
+use in:GroupRoom
+use in:GroupRoom
+use in:GroupRoom
+getBookings
+use in:GroupRoom
+use in:GroupRoom
+use in:GroupRoom
+book
+GroupRoom
+i
+use in:getInterval
+u
+use in:getBooker
+getInterval
+use in:Booking
+use in:Booking
+use in:Booking
+use in:Booking
+getBooker
+use in:Booking
+use in:Booking
+use in:Booking
+use in:Booking
+Booking
+INFO: 8/8 source files have been analyzed
+INFO: Java Main Files AST scan (done) | time=1946ms
+INFO: Java Test Files AST scan
+INFO: 0 source files to be analyzed
+INFO: Java Test Files AST scan (done) | time=1ms
+INFO: Java Generated Files AST scan
+INFO: 0/0 source files have been analyzed
+INFO: 0 source files to be analyzed
+INFO: Java Generated Files AST scan (done) | time=0ms
+INFO: Sensor JavaSquidSensor [java] (done) | time=2082ms
+INFO: Sensor FindBugs Sensor [findbugs]
+INFO: 0/0 source files have been analyzed
+INFO: Loading findbugs plugin: /home/gurgy/Projects/RobotResearcher/submissions/6033c7315af2c702367b3a94/booking/.scannerwork/findbugs/sb-contrib.jar
+INFO: Loading findbugs plugin: /home/gurgy/Projects/RobotResearcher/submissions/6033c7315af2c702367b3a94/booking/.scannerwork/findbugs/findsecbugs-plugin.jar
+INFO: Findbugs output report: /home/gurgy/Projects/RobotResearcher/submissions/6033c7315af2c702367b3a94/booking/.scannerwork/findbugs-result.xml
+The following classes needed for analysis were missing:
+  makeConcatWithConstants
+INFO: Sensor FindBugs Sensor [findbugs] (done) | time=3985ms
+INFO: Sensor SurefireSensor [java]
+INFO: parsing [/home/gurgy/Projects/RobotResearcher/submissions/6033c7315af2c702367b3a94/booking/target/surefire-reports]
+INFO: Sensor SurefireSensor [java] (done) | time=1ms
+INFO: Sensor JavaXmlSensor [java]
+INFO: Sensor JavaXmlSensor [java] (done) | time=1ms
+INFO: Sensor CheckstyleSensor [checkstyle]
+INFO: Checkstyle output report: /home/gurgy/Projects/RobotResearcher/submissions/6033c7315af2c702367b3a94/booking/.scannerwork/checkstyle-result.xml
+INFO: Checkstyle configuration: /home/gurgy/Projects/RobotResearcher/submissions/6033c7315af2c702367b3a94/booking/.scannerwork/checkstyle.xml
+INFO: Checkstyle charset: UTF-8
+INFO: Sensor CheckstyleSensor [checkstyle] (done) | time=809ms
+INFO: ------------- Run sensors on project
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=6ms
+INFO: Sensor Java CPD Block Indexer
+INFO: Sensor Java CPD Block Indexer (done) | time=37ms
+INFO: CPD Executor 1 file had no CPD blocks
+INFO: CPD Executor Calculating CPD for 7 files
+INFO: CPD Executor CPD calculation finished (done) | time=14ms
+INFO: Analysis report generated in 233ms, dir size=200 KB
+INFO: Analysis report compressed in 64ms, zip size=53 KB
+INFO: Analysis report uploaded in 121ms
+INFO: ANALYSIS SUCCESSFUL, you can browse https://sonarqube.sidus.io/dashboard?id=booking-high-6033c7315af2c702367b3a94
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at https://sonarqube.sidus.io/api/ce/task?id=AXhajMIo-3MEebgqC_77
+INFO: Analysis total time: 10.930 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 12.680s
+INFO: Final Memory: 27M/114M
+INFO: ------------------------------------------------------------------------

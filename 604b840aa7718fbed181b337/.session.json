@@ -1,0 +1,15 @@
+{
+    "signup_code": "light-card",
+    "background_answers": {
+        "education_level": "Ph. D.",
+        "education_field": "computer science",
+        "work_experience": "6",
+        "work_experience_java": "4",
+        "work_domain": "research",
+        "workplace_peer_review": true,
+        "workplace_pair_programming": true,
+        "workplace_td_tracking": true,
+        "workplace_coding_standards": true
+    },
+    "repeat_of": ""
+}

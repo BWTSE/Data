@@ -1,0 +1,85 @@
+diff -rdBEZN ../../../Scenarios/booking/high_debt/booking/ClassRoom.java .submission/booking/ClassRoom.java
+10c10
+< public class ClassRoom implements Room {
+---
+> public class ClassRoom implements RoomWithProjector {
+diff -rdBEZN ../../../Scenarios/booking/high_debt/booking/ComputerClassRoom.java .submission/booking/ComputerClassRoom.java
+0a1,63
+> 
+> package booking;
+> 
+> import java.time.LocalTime;
+> import java.util.List;
+> import java.util.Optional;
+> import java.util.Objects;
+> 
+> public class ComputerClassRoom implements RoomWithProjector {
+> 	private final ClassRoom classRoom;
+> 	private final LocalTime opening;
+> 	private final LocalTime closing;
+> 	
+> 	public ComputerClassRoom(ClassRoom classRoom, int opening, int closing) {
+> 		this.classRoom = classRoom;
+> 		this.opening = LocalTime.of(opening, 0);
+> 		this.closing = LocalTime.of(closing, 0);
+> 	}
+> 	
+> 	@Override
+> 	public String getName() {
+> 		return classRoom.getName();
+> 	}
+>     
+>     @Override
+> 	public String getDescription() {
+> 		return classRoom.getDescription();
+> 	}
+>     @Override
+> 	public List<Booking> getBookings() {
+> 		return classRoom.getBookings();
+> 	}
+>     @Override
+> 	public Optional<Booking> book(Interval i, User u) {
+> 		if (opening.isAfter(i.getStart().toLocalTime()) 
+> 		|| closing.isBefore(i.getEnd().toLocalTime())) {
+> 			return Optional.empty();
+> 		}
+> 		
+> 		return classRoom.book(i,u);
+> 	}
+>     @Override
+> 	public boolean hasProjector() {
+> 		return classRoom.hasProjector();
+> 	}
+> 	
+> 	@Override
+>     public boolean equals(Object o) {
+>         return classRoom.equals(o)
+>             && Objects.equals(opening, ((ComputerClassRoom) o).opening)
+>             && Objects.equals(closing, ((ComputerClassRoom) o).closing);
+>     }
+> 
+>     @Override
+>     public int hashCode() {
+>         return Objects.hash(classRoom.hashCode(), opening, closing);
+>     }
+> 
+>     @Override
+>     public String toString() {
+>         return classRoom.toString();
+>     }
+> }
+\ No newline at end of file
+diff -rdBEZN ../../../Scenarios/booking/high_debt/booking/Main.java .submission/booking/Main.java
+15c15
+<     private static final ComputerClassRoom r2 = new ComputerClassRoom("J029", "in Jupiter", false, 7, 17);
+---
+>     private static final ComputerClassRoom r2 = new ComputerClassRoom(new ClassRoom("J029", "in Jupiter", false), 7, 17);
+diff -rdBEZN ../../../Scenarios/booking/high_debt/booking/RoomWithProjector.java .submission/booking/RoomWithProjector.java
+0a1,6
+> 
+> package booking;
+> 
+> public interface RoomWithProjector extends Room {
+> 	boolean hasProjector();
+> }
+\ No newline at end of file

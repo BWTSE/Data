@@ -1,0 +1,328 @@
+diff -rdBEZN ../../../Scenarios/tickets/high_debt/tickets/Main.java .submission/tickets/Main.java
+28c28
+<         new TicketTypeSeasonalRestricted("Retiree Winter Ticket", 199.0, z2, Season.WINTER, 
+---
+>         new TicketTypeSeasonal("Retiree Winter Ticket", 199.0, z2, Season.WINTER, 
+33c33
+<         new TicketTypeSeasonalRestricted( "Student Winter Ticket", 199.0, z3, Season.WINTER, 
+---
+>         new TicketTypeSeasonal( "Student Winter Ticket", 199.0, z3, Season.WINTER, 
+diff -rdBEZN ../../../Scenarios/tickets/high_debt/tickets/Season.java .submission/tickets/Season.java
+14c14
+<     private transient Set<Month> m;
+---
+>     private transient Set<Month> months;
+16,17c16,17
+<     Season (Set<Month> m) {
+<         this.m = EnumSet.copyOf(m);
+---
+>     Season (Set<Month> months) {
+>         this.months = EnumSet.copyOf(months);
+21c21
+<         return this.m.contains(date.getMonth());
+---
+>         return this.months.contains(date.getMonth());
+diff -rdBEZN ../../../Scenarios/tickets/high_debt/tickets/TicketFinder.java .submission/tickets/TicketFinder.java
+11c11
+<     private final Set<TicketType> ts;
+---
+>     private final Set<TicketType> ticketTypes;
+13,14c13,14
+<     public TicketFinder(Collection<TicketType> ts) {
+<         this.ts = new HashSet<>(ts);
+---
+>     public TicketFinder(Collection<TicketType> ticketTypes) {
+>         this.ticketTypes = new HashSet<>(ticketTypes);
+17,18c17,18
+<     public Set<TicketType> find(User u, Trip t, double p) {
+<         Set<TicketType> r = find(u, t);
+---
+>     public Set<TicketType> find(User user, Trip trip, double price) {
+>         Set<TicketType> foundTicketTypes = find(user, trip);
+20,22c20,22
+<         for (Iterator<TicketType> it = r.iterator(); it.hasNext();) {
+<             TicketType e = it.next();
+<             if (e.getPrice() >= p) {
+---
+>         for (Iterator<TicketType> it = foundTicketTypes.iterator(); it.hasNext();) {
+>             TicketType foundTicketType = it.next();
+>             if (foundTicketType.getPrice() >= price) {
+27c27
+<         return r;
+---
+>         return foundTicketTypes;
+30,31c30,31
+<     public Set<TicketType> find(User u, Trip t) {
+<         Set<TicketType> r = new HashSet<>();
+---
+>     public Set<TicketType> find(User user, Trip trip) {
+>         Set<TicketType> foundTicketTypes = new HashSet<>();
+33,35c33,35
+<         for (TicketType TicketType : ts) {
+<             if (TicketType.isValidFor(t, u)) {
+<                 r.add(TicketType);
+---
+>         for (TicketType TicketType : ticketTypes) {
+>             if (TicketType.isValidFor(trip, user)) {
+>                 foundTicketTypes.add(TicketType);
+39c39
+<         return r;
+---
+>         return foundTicketTypes;
+42,44c42,44
+<     public Optional<Ticket> purchaseTicket(User u, TicketType tt, Trip t) {
+<         if(find(u, t).contains(tt)) {
+<             return Optional.of(new Ticket(tt, u));
+---
+>     public Optional<Ticket> purchaseTicket(User user, TicketType ticketType, Trip trip) {
+>         if(find(user, trip).contains(ticketType)) {
+>             return Optional.of(new Ticket(ticketType, user));
+51c51
+<         return new HashSet<>(this.ts);
+---
+>         return new HashSet<>(this.ticketTypes);
+diff -rdBEZN ../../../Scenarios/tickets/high_debt/tickets/Ticket.java .submission/tickets/Ticket.java
+8,10c8,10
+<     private final TicketType tt;
+<     private final User u;
+<     private final LocalDateTime t;
+---
+>     private final TicketType ticketType;
+>     private final User user;
+>     private final LocalDateTime timeOfPurchase;
+12,15c12,15
+<     public Ticket(TicketType tt, User u) {
+<         this.tt = tt;
+<         this.u = u;
+<         this.t = LocalDateTime.now();
+---
+>     public Ticket(TicketType ticketType, User user) {
+>         this.ticketType = ticketType;
+>         this.user = user;
+>         this.timeOfPurchase = LocalDateTime.now();
+19c19
+<         return this.tt;
+---
+>         return this.ticketType;
+23c23
+<         return this.u;
+---
+>         return this.user;
+27c27
+<         return this.t;
+---
+>         return this.timeOfPurchase;
+30,31c30,31
+<     public boolean isValidFor(Trip t, User u) {
+<         return tt.isValidFor(t, u);
+---
+>     public boolean isValidFor(Trip trip, User user) {
+>         return ticketType.isValidFor(trip, user);
+diff -rdBEZN ../../../Scenarios/tickets/high_debt/tickets/TicketTypeSeasonal.java .submission/tickets/TicketTypeSeasonal.java
+9,12c9,13
+<     private final String n;
+<     private final double p;
+<     private final Set<Zone> zs;
+<     private final Season vs;
+---
+>     private final String name;
+>     private final double price;
+>     private final Set<Zone> validZones;
+>     private final Season validSeason;
+>     private final Set<User.Occupation> validOccupations;
+14,18c15,30
+<     public TicketTypeSeasonal(String n, double p, Set<Zone> zs, Season vs) {
+<         this.n = n;
+<         this.p = p;
+<         this.zs = EnumSet.copyOf(zs);
+<         this.vs = vs;
+---
+>     public TicketTypeSeasonal(String name, double price, Set<Zone> validZones, 
+>     Season validSeason) {
+>         this.name = name;
+>         this.price = price;
+>         this.validZones = EnumSet.copyOf(validZones);
+>         this.validSeason = validSeason;
+>         this.validOccupations = EnumSet.allOf(User.Occupation.class);
+>     }
+>     
+>     public TicketTypeSeasonal(String name, double price, Set<Zone> validZones, 
+>     Season validSeason, Set<User.Occupation> validOccupations) {
+>         this.name = name;
+>         this.price = price;
+>         this.validZones = EnumSet.copyOf(validZones);
+>         this.validSeason = validSeason;
+>         this.validOccupations = EnumSet.copyOf(validOccupations);
+23c35
+<     Also checks that the ticket is valid in the zones of the trip.
+---
+>     Also checks that the ticket is valid in the zones of the trip and for the occupation of the user.
+29c41,42
+<             && this.getValidSeason().isDateWithin(t.getTripStartTime());
+---
+>             && this.getValidSeason().isDateWithin(t.getTripStartTime())
+>             && this.getValidOccupations().contains(u.getOccupation());
+33c46
+<         return this.n;
+---
+>         return this.name;
+37c50
+<         return this.p;
+---
+>         return this.price;
+41c54
+<         return EnumSet.copyOf(this.zs);
+---
+>         return EnumSet.copyOf(this.validZones);
+45c58,62
+<         return this.vs;
+---
+>         return this.validSeason;
+>     }
+>     
+>     public Set<User.Occupation> getValidOccupations() {
+>         return EnumSet.copyOf(this.validOccupations);
+62c79,80
+<             && Objects.equals(this.getPrice(), tt.getPrice());
+---
+>             && Objects.equals(this.getPrice(), tt.getPrice())
+>             && Objects.equals(this.getValidOccupations(), tt.getValidOccupations());
+67c85,86
+<         return Objects.hash(this.getName(), this.getPrice(), this.getValidSeason());
+---
+>         return Objects.hash(this.getName(), this.getPrice(), this.getValidSeason() 
+>         , this.getValidOccupations());
+diff -rdBEZN ../../../Scenarios/tickets/high_debt/tickets/TicketTypeSingle.java .submission/tickets/TicketTypeSingle.java
+9,13c9,13
+<     private final String n;
+<     private final double p;
+<     private final Set<Zone> zs;
+<     private final int sh;
+<     private final int eh;
+---
+>     private final String name;
+>     private final double price;
+>     private final Set<Zone> validZones;
+>     private final int startHour;
+>     private final int endHour;
+15,20c15,21
+<     public TicketTypeSingle(String n, double p, Set<Zone> zs, int sh, int eh) {
+<         this.n = n;
+<         this.p = p;
+<         this.zs = EnumSet.copyOf(zs);
+<         this.sh = sh;
+<         this.eh = eh;
+---
+>     public TicketTypeSingle(String name, double price, Set<Zone> validZones,
+>     int startHour, int endHour) {
+>         this.name = name;
+>         this.price = price;
+>         this.validZones = EnumSet.copyOf(validZones);
+>         this.startHour = startHour;
+>         this.endHour = endHour;
+29c30
+<         if (this.sh < this.eh) {
+---
+>         if (this.startHour < this.endHour) {
+31,32c32,33
+<                 t.getTripStartTime().getHour() >= this.sh 
+<                 && t.getTripStartTime().getHour() < this.eh
+---
+>                 t.getTripStartTime().getHour() >= this.startHour 
+>                 && t.getTripStartTime().getHour() < this.endHour
+36,37c37,38
+<             return (t.getTripStartTime().getHour() >= this.sh 
+<                     || t.getTripStartTime().getHour() > this.eh) 
+---
+>             return (t.getTripStartTime().getHour() >= this.startHour
+>                     || t.getTripStartTime().getHour() > this.endHour) 
+44c45
+<         return this.n;
+---
+>         return this.name;
+48c49
+<         return this.p;
+---
+>         return this.price;
+52c53
+<         return EnumSet.copyOf(this.zs);
+---
+>         return EnumSet.copyOf(this.validZones);
+56c57
+<         return this.sh;
+---
+>         return this.startHour;
+60c61
+<         return this.eh;
+---
+>         return this.endHour;
+diff -rdBEZN ../../../Scenarios/tickets/high_debt/tickets/Trip.java .submission/tickets/Trip.java
+9,11c9,11
+<     private final Zone sz;
+<     private final Zone ez;
+<     private final LocalDateTime t;
+---
+>     private final Zone startingZone;
+>     private final Zone endingZone;
+>     private final LocalDateTime tripStartTime;
+13,16c13,16
+<     public Trip(Zone sz, Zone ez, LocalDateTime t) {
+<         this.sz = sz;
+<         this.ez = ez;
+<         this.t = t;
+---
+>     public Trip(Zone startingZone, Zone endingZone, LocalDateTime tripStartTime) {
+>         this.startingZone = startingZone;
+>         this.endingZone = endingZone;
+>         this.tripStartTime = tripStartTime;
+20c20
+<         return this.sz;
+---
+>         return this.startingZone;
+24c24
+<         return this.ez;
+---
+>         return this.endingZone;
+28c28
+<         return this.t;
+---
+>         return this.tripStartTime;
+diff -rdBEZN ../../../Scenarios/tickets/high_debt/tickets/User.java .submission/tickets/User.java
+13,16c13,16
+<     private final String n;
+<     private final String e;
+<     private final int a;
+<     private final Occupation o;
+---
+>     private final String name;
+>     private final String email;
+>     private final int age;
+>     private final Occupation occupation;
+19,23c19,23
+<     public User(String n, String e, int a, Occupation o) {
+<         this.n = n;
+<         this.e = e;
+<         this.a = a;
+<         this.o = o;
+---
+>     public User(String name, String email, int age, Occupation occupation) {
+>         this.name = name;
+>         this.email = email;
+>         this.age = age;
+>         this.occupation = occupation;
+27c27
+<         return n;
+---
+>         return this.name;
+31c31
+<         return e;
+---
+>         return this.email;
+35c35
+<         return a;
+---
+>         return this.age;
+39c39
+<         return this.o;
+---
+>         return this.occupation;

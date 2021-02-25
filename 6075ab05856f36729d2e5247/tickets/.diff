@@ -1,0 +1,27 @@
+diff -rdBEZN ../../../Scenarios/tickets/low_debt/tickets/TicketTypeSeasonalRestricted.java .submission/tickets/TicketTypeSeasonalRestricted.java
+0a1,24
+> 
+> package tickets;
+> 
+> import java.util.Objects;
+> import java.util.Set;
+> 
+> public class TicketTypeSeasonalRestricted extends TicketTypeSeasonal {
+> 	
+> 	Set<User.Occupation> validUsers;
+> 	
+> 	public TicketTypeSeasonalRestricted(String name, double price, Set<Zone> validZones, Season validSeason, Set<User.Occupation> validUsers){
+> 		//TicketTypeSeasonal(String name, double price, Set<Zone> validZones, Season validSeason)
+> 		super(name, price, validZones,validSeason );
+> 		this.validUsers = validUsers;
+> 	}
+> 	
+> 	  @Override
+>     public boolean isValidFor(Trip trip, User user) {
+>         return (super.isValidFor(trip, user)
+>             && validUsers.contains(user.getOccupation())
+>             );
+>     }
+> 	
+> }
+\ No newline at end of file

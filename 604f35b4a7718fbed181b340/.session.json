@@ -1,0 +1,15 @@
+{
+    "signup_code": "light-card",
+    "background_answers": {
+        "education_level": "Master degree",
+        "education_field": "Computer Science",
+        "work_experience": "3",
+        "work_experience_java": "2",
+        "work_domain": "Software development",
+        "workplace_peer_review": true,
+        "workplace_pair_programming": true,
+        "workplace_td_tracking": true,
+        "workplace_coding_standards": false
+    },
+    "repeat_of": ""
+}

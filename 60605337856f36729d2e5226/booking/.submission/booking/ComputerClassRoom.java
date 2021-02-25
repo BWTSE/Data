@@ -1,0 +1,62 @@
+package booking;
+
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoField;
+import java.util.Objects;
+import java.util.Optional;
+
+public class ComputerClassRoom extends ClassRoom {
+	
+	private final int hourOfOpening;
+	private final int hourOfClosing;
+	
+	public ComputerClassRoom(String name, String description, boolean hasProjector,
+	int hourOfOpening, int hourOfClosing ) {
+		
+    	super(name, description, hasProjector);
+    	this.hourOfOpening = hourOfOpening;
+    	this.hourOfClosing = hourOfClosing; 
+	}
+	
+	public int getHourOfOpening() {
+		return this.hourOfOpening;
+	}
+	
+	public int getHourOfClosing() {
+		return this.hourOfClosing;
+	}	
+	
+	
+	    /*
+    Only allows bookings within the open hours of the room.
+    */
+    @Override
+    public Optional<Booking> book(Interval interval, User customer) {
+        LocalDateTime bookingStart = interval.getStart()
+            .with(ChronoField.SECOND_OF_MINUTE, 0)
+            .with(ChronoField.NANO_OF_SECOND, 0);
+
+        LocalDateTime bookingEnd = interval.getEnd()
+            .with(ChronoField.SECOND_OF_MINUTE, 0)
+            .with(ChronoField.NANO_OF_SECOND, 0);
+
+        if ( bookingStart.getHour() < this.getHourOfOpening() || bookingEnd.getHour() >= this.getHourOfClosing() ) {
+            return Optional.empty();
+        }
+
+        return super.book(new Interval(bookingStart, bookingEnd), customer);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o)
+            && Objects.equals(this.getHourOfOpening(), ((ComputerClassRoom) o).getHourOfOpening())
+            && Objects.equals(this.getHourOfClosing(), ((ComputerClassRoom) o).getHourOfClosing());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), this.getHourOfOpening(), this.getHourOfClosing());
+    }
+	
+}

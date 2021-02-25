@@ -1,0 +1,307 @@
+INFO: Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: SonarScanner 4.5.0.2216
+INFO: Java 15.0.2 AdoptOpenJDK (64-bit)
+INFO: Linux 5.11.8-arch1-1 amd64
+INFO: User cache: /home/gurgy/.sonar/cache
+INFO: Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: Analyzing on SonarQube server 8.4.2
+INFO: Default locale: "en_US", source code encoding: "UTF-8" (analysis is platform dependent)
+INFO: Load global settings
+INFO: Load global settings (done) | time=303ms
+INFO: Server id: BF41A1F2-AXRis_C3qIKX52rsj1Qt
+INFO: User cache: /home/gurgy/.sonar/cache
+INFO: Load/download plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=68ms
+INFO: Load/download plugins (done) | time=91ms
+INFO: Process project properties
+INFO: Process project properties (done) | time=4ms
+INFO: Project key: tickets-high-605f3f2d856f36729d2e5224
+INFO: Base dir: /home/gurgy/Projects/RobotResearcher/submissions/605f3f2d856f36729d2e5224/tickets
+INFO: Working dir: /home/gurgy/Projects/RobotResearcher/submissions/605f3f2d856f36729d2e5224/tickets/.scannerwork
+INFO: Load project settings for component key: 'tickets-high-605f3f2d856f36729d2e5224'
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=146ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=2946ms
+INFO: Exclusions based on SCM info is disabled by configuration
+INFO: Indexing files...
+INFO: Project configuration:
+INFO:   Excluded sources: */Main.java
+INFO: 11 files indexed
+INFO: 0 files ignored because of inclusion/exclusion patterns
+INFO: Quality profile for java: All
+INFO: ------------- Run sensors on module tickets-high-605f3f2d856f36729d2e5224
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=84ms
+INFO: Sensor JavaSquidSensor [java]
+INFO: Configured Java source version (sonar.java.source): none
+INFO: JavaClasspath initialization
+WARN: Bytecode of dependencies was not provided for analysis of source files, you might end up with less precise results. Bytecode can be provided using sonar.java.libraries property.
+INFO: JavaClasspath initialization (done) | time=6ms
+INFO: JavaTestClasspath initialization
+INFO: JavaTestClasspath initialization (done) | time=0ms
+INFO: Java Main Files AST scan
+INFO: 11 source files to be analyzed
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=41ms
+n
+use in:getName
+p
+use in:getPrice
+zs
+use in:getValidZones
+vs
+use in:getValidSeason
+getName
+use in:TicketTypeSeasonalRestricted
+use in:TicketTypeSeasonalRestricted
+use in:TicketTypeSeasonalRestricted
+getPrice
+use in:TicketTypeSeasonalRestricted
+use in:TicketTypeSeasonalRestricted
+getValidZones
+use in:TicketTypeSeasonalRestricted
+use in:TicketTypeSeasonalRestricted
+use in:TicketTypeSeasonalRestricted
+getValidSeason
+use in:TicketTypeSeasonalRestricted
+use in:TicketTypeSeasonalRestricted
+use in:TicketTypeSeasonalRestricted
+TicketTypeSeasonalRestricted
+ts
+use in:find
+use in:getticketTypes
+find
+use in:TicketFinder
+use in:TicketFinder
+getticketTypes
+TicketFinder
+u1
+use in:main
+u2
+use in:main
+u3
+use in:main
+z1
+z2
+z3
+t1
+use in:main
+t2
+use in:main
+t3
+use in:main
+t4
+use in:main
+t5
+use in:main
+use in:main
+use in:main
+use in:main
+t6
+use in:main
+t7
+use in:main
+use in:main
+use in:main
+use in:main
+main
+Main
+sz
+use in:getStartZone
+ez
+use in:getEndZone
+t
+use in:getTripStartTime
+getStartZone
+use in:Trip
+use in:Trip
+use in:Trip
+use in:Trip
+getEndZone
+use in:Trip
+use in:Trip
+use in:Trip
+use in:Trip
+getTripStartTime
+use in:Trip
+use in:Trip
+use in:Trip
+use in:Trip
+Trip
+n
+use in:getName
+e
+use in:getEmail
+a
+use in:getAge
+o
+use in:getOccupation
+getName
+use in:User
+getEmail
+use in:User
+use in:User
+use in:User
+use in:User
+getAge
+getOccupation
+User
+n
+use in:getName
+p
+use in:getPrice
+zs
+use in:getValidZones
+sh
+use in:isValidFor
+use in:isValidFor
+use in:isValidFor
+use in:getStartHour
+eh
+use in:isValidFor
+use in:isValidFor
+use in:isValidFor
+use in:getEndHour
+getName
+use in:TicketTypeSingle
+use in:TicketTypeSingle
+use in:TicketTypeSingle
+use in:TicketTypeSingle
+getPrice
+use in:TicketTypeSingle
+use in:TicketTypeSingle
+use in:TicketTypeSingle
+getValidZones
+use in:TicketTypeSingle
+use in:TicketTypeSingle
+use in:TicketTypeSingle
+use in:TicketTypeSingle
+use in:TicketTypeSingle
+use in:TicketTypeSingle
+isValidFor
+getStartHour
+use in:TicketTypeSingle
+use in:TicketTypeSingle
+use in:TicketTypeSingle
+getEndHour
+use in:TicketTypeSingle
+use in:TicketTypeSingle
+use in:TicketTypeSingle
+TicketTypeSingle
+n
+use in:getName
+p
+use in:getPrice
+zs
+use in:getValidZones
+vs
+use in:getValidSeason
+getName
+use in:TicketTypeSeasonal
+use in:TicketTypeSeasonal
+use in:TicketTypeSeasonal
+use in:TicketTypeSeasonal
+getPrice
+use in:TicketTypeSeasonal
+use in:TicketTypeSeasonal
+use in:TicketTypeSeasonal
+getValidZones
+use in:TicketTypeSeasonal
+use in:TicketTypeSeasonal
+use in:TicketTypeSeasonal
+use in:TicketTypeSeasonal
+getValidSeason
+use in:TicketTypeSeasonal
+use in:TicketTypeSeasonal
+use in:TicketTypeSeasonal
+use in:TicketTypeSeasonal
+TicketTypeSeasonal
+tt
+use in:getTicketType
+use in:isValidFor
+u
+use in:getUser
+t
+use in:getTimeOfPurchase
+getTicketType
+use in:Ticket
+use in:Ticket
+use in:Ticket
+use in:Ticket
+isValidFor
+getUser
+use in:Ticket
+use in:Ticket
+use in:Ticket
+getTimeOfPurchase
+use in:Ticket
+use in:Ticket
+use in:Ticket
+Ticket
+INFO: 11/11 source files have been analyzed
+INFO: Java Main Files AST scan (done) | time=2079ms
+INFO: Java Test Files AST scan
+INFO: 0 source files to be analyzed
+INFO: Java Test Files AST scan (done) | time=0ms
+INFO: 0/0 source files have been analyzed
+INFO: Java Generated Files AST scan
+INFO: 0 source files to be analyzed
+INFO: Java Generated Files AST scan (done) | time=1ms
+INFO: 0/0 source files have been analyzed
+INFO: Sensor JavaSquidSensor [java] (done) | time=2195ms
+INFO: Sensor FindBugs Sensor [findbugs]
+INFO: Loading findbugs plugin: /home/gurgy/Projects/RobotResearcher/submissions/605f3f2d856f36729d2e5224/tickets/.scannerwork/findbugs/sb-contrib.jar
+INFO: Loading findbugs plugin: /home/gurgy/Projects/RobotResearcher/submissions/605f3f2d856f36729d2e5224/tickets/.scannerwork/findbugs/findsecbugs-plugin.jar
+INFO: Findbugs output report: /home/gurgy/Projects/RobotResearcher/submissions/605f3f2d856f36729d2e5224/tickets/.scannerwork/findbugs-result.xml
+INFO: Sensor FindBugs Sensor [findbugs] (done) | time=5031ms
+INFO: Sensor SurefireSensor [java]
+INFO: parsing [/home/gurgy/Projects/RobotResearcher/submissions/605f3f2d856f36729d2e5224/tickets/target/surefire-reports]
+INFO: Sensor SurefireSensor [java] (done) | time=2ms
+INFO: Sensor JavaXmlSensor [java]
+INFO: Sensor JavaXmlSensor [java] (done) | time=1ms
+INFO: Sensor CheckstyleSensor [checkstyle]
+INFO: Checkstyle output report: /home/gurgy/Projects/RobotResearcher/submissions/605f3f2d856f36729d2e5224/tickets/.scannerwork/checkstyle-result.xml
+INFO: Checkstyle configuration: /home/gurgy/Projects/RobotResearcher/submissions/605f3f2d856f36729d2e5224/tickets/.scannerwork/checkstyle.xml
+INFO: Checkstyle charset: UTF-8
+INFO: Sensor CheckstyleSensor [checkstyle] (done) | time=913ms
+INFO: ------------- Run sensors on project
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=8ms
+INFO: Sensor Java CPD Block Indexer
+INFO: Sensor Java CPD Block Indexer (done) | time=37ms
+INFO: SCM Publisher SCM provider for this project is: git
+INFO: SCM Publisher 11 source files to be analyzed
+INFO: SCM Publisher 0/11 source files have been analyzed (done) | time=271ms
+WARN: Missing blame information for the following files:
+WARN:   * .submission/tickets/Season.java
+WARN:   * .submission/tickets/TicketTypeSeasonalRestricted.java
+WARN:   * .submission/tickets/TicketFinder.java
+WARN:   * .submission/tickets/Main.java
+WARN:   * .submission/tickets/Trip.java
+WARN:   * .submission/tickets/User.java
+WARN:   * .submission/tickets/TicketTypeSingle.java
+WARN:   * .submission/tickets/TicketTypeSeasonal.java
+WARN:   * .submission/tickets/Ticket.java
+WARN:   * .submission/tickets/Zone.java
+WARN:   * .submission/tickets/TicketType.java
+WARN: This may lead to missing/broken features in SonarQube
+INFO: CPD Executor 3 files had no CPD blocks
+INFO: CPD Executor Calculating CPD for 8 files
+INFO: CPD Executor CPD calculation finished (done) | time=15ms
+INFO: Analysis report generated in 59ms, dir size=209 KB
+INFO: Analysis report compressed in 51ms, zip size=57 KB
+INFO: Analysis report uploaded in 310ms
+INFO: ANALYSIS SUCCESSFUL, you can browse https://sonarqube.sidus.io/dashboard?id=tickets-high-605f3f2d856f36729d2e5224
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at https://sonarqube.sidus.io/api/ce/task?id=AXh3_TMI-3MEebgqC_93
+INFO: Analysis total time: 12.644 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 13.884s
+INFO: Final Memory: 27M/114M
+INFO: ------------------------------------------------------------------------

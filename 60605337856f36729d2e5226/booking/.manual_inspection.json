@@ -1,0 +1,32 @@
+{
+    "task_completion": "Completed",
+    "reused_logic_constructor": true,
+    "reused_logic_validation": true,
+    "reused_logic_equals": true,
+    "reused_logic_hashcode": true,
+    "copied_variable_names_all": [
+        "name",
+        "description",
+        "hasProjector",
+        "interval",
+        "customer",
+        "bookingStart",
+        "bookingEnd",
+        "o"
+    ],
+    "copied_variable_names_bad": [],
+    "new_variable_names_all": [
+        "hourOfOpening",
+        "hourOfClosing",
+        "hourOfOpening",
+        "hourOfClosing"
+    ],
+    "new_variable_names_bad": [],
+    "edited_variable_names_all": [],
+    "edited_variable_names_bad": [],
+    "has_equals": true,
+    "has_hashcode": true,
+    "documentation_state": "Correct",
+    "large_structure_change": false,
+    "inspection_done": true
+}

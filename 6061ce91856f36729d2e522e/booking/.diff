@@ -1,0 +1,315 @@
+diff -rdBEZN ../../../Scenarios/booking/high_debt/booking/ClassRoom.java .submission/booking/ClassRoom.java
+10,23c10
+< public class ClassRoom implements Room {
+< 
+<     private final String n;
+<     private final String d;
+< 
+<     private final List<Booking> bs = new LinkedList<>();
+< 
+<     private boolean p;
+< 
+<     public ClassRoom(String n, String d, boolean p) {
+<         this.n = n;
+<         this.d = d;
+<         this.p = p;
+<     }
+---
+> public class ClassRoom extends Room {
+25,27c12
+<     public String getName() {
+<         return this.n;
+<     }
+---
+>     private final boolean projector;
+29,30c14,16
+<     public String getDescription() {
+<         return this.d;
+---
+>     public ClassRoom(String name, String description, boolean projector) {
+>         super(name, description);
+>         this.projector = projector;
+34,48c20
+<         return this.p;
+<     }
+< 
+<     public List<Booking> getBookings() {
+<         return List.copyOf(this.bs);
+<     }
+< 
+<     private boolean available(Interval i) {
+<         for (Booking b : this.getBookings()) {
+<             if (b.getInterval().overlapsWith(i)) {
+<                 return false;
+<             }
+<         }
+< 
+<         return true;
+---
+>         return this.projector;
+54a27
+> 	@Override
+58d30
+<             || !available(i)
+60d31
+<             || !startBeforeEnd(i)
+65,72c36
+<         Booking b = new Booking(i, u);
+<         bs.add(b);
+< 
+<         return Optional.of(b);
+<     }
+< 
+<     private static boolean startBeforeEnd(Interval i) {
+<         return !(i.getEnd().isBefore(i.getStart()) || i.getStart().isBefore(LocalDateTime.now()));
+---
+>         return super.book(i, u);
+90c54
+<             && Objects.equals(this.hasProjector(), ((ClassRoom) o).hasProjector());
+---
+>             && Objects.equals(this.hasProjector(), ((ClassRoom)o).hasProjector());
+96,105d59
+<     }
+< 
+<     @Override
+<     public String toString() {
+<         return String.format(
+<                 "Room %s \"%s\" #bookings: %s",
+<                 this.getName(),
+<                 this.getDescription(),
+<                 this.getBookings().size()
+<         );
+diff -rdBEZN ../../../Scenarios/booking/high_debt/booking/ComputerClassRoom.java .submission/booking/ComputerClassRoom.java
+0a1,61
+> package booking;
+> 
+> import java.time.LocalDateTime;
+> import java.time.temporal.ChronoField;
+> import java.util.LinkedList;
+> import java.util.List;
+> import java.util.Objects;
+> import java.util.Optional;
+> 
+> public class ComputerClassRoom extends ClassRoom {
+> 	
+> 	private final int openingHour;
+> 	private final int closingHour;
+> 	
+>     public ComputerClassRoom(String name, String description, boolean projector, int openingHour, int closingHour) {
+>         super(name, description, projector);
+>         this.openingHour = openingHour;
+> 		this.closingHour = closingHour;
+>     }
+>     
+>     public int getOpeningHour() {
+>     	return this.openingHour;
+>     }
+>     
+>     public int getClosingHour() {
+>     	return this.closingHour;
+>     }
+> 
+>     /*
+>     Only allows bookings during the specified period of a day.
+>     */
+> 	@Override
+>     public Optional<Booking> book(Interval i, User u) {
+>         if (!this.isDuringOpenTime(i)) {
+>             return Optional.empty();
+>         }
+> 
+>         return super.book(i, u);
+>     }
+> 
+>     private boolean isDuringOpenTime(Interval i) {
+>     	return this.openingHour <= i.getStart().getHour() &&
+>     		i.getEnd().getHour() <= this.closingHour;
+>     }
+> 
+>     @Override
+>     public boolean equals(Object o) {
+>         return super.equals(o)
+>             && Objects.equals(this.getOpeningHour(), ((ComputerClassRoom)o).getOpeningHour())
+>             && Objects.equals(this.getClosingHour(), ((ComputerClassRoom)o).getClosingHour());
+>     }
+> 
+>     @Override
+>     public int hashCode() {
+>         return Objects.hash(
+>         	super.hashCode(),
+>         	this.getOpeningHour(),
+> 			this.getClosingHour()
+>         );
+>     }
+> }
+diff -rdBEZN ../../../Scenarios/booking/high_debt/booking/GroupRoom.java .submission/booking/GroupRoom.java
+9,21c9
+< public class GroupRoom implements Room {
+< 
+<     private final String n;
+<     private final String d;
+<     private final boolean w;
+< 
+<     private final List<Booking> bs = new LinkedList<>();
+< 
+<     protected GroupRoom(String n, String d, boolean w) {
+<         this.n = n;
+<         this.d = d;
+<         this.w = w;
+<     }
+---
+> public class GroupRoom extends Room {
+23,25c11
+<     public String getName() {
+<         return this.n;
+<     }
+---
+>     private final boolean whiteboard;
+27,28c13,15
+<     public String getDescription() {
+<         return this.d;
+---
+>     protected GroupRoom(String name, String description, boolean whiteboard) {
+>     	super(name, description);
+>         this.whiteboard = whiteboard;
+32,46c19
+<         return this.w;
+<     }
+< 
+<     public List<Booking> getBookings() {
+<         return List.copyOf(this.bs);
+<     }
+< 
+<     private boolean available(Interval i) {
+<         for (Booking b : this.getBookings()) {
+<             if (b.getInterval().overlapsWith(i)) {
+<                 return false;
+<             }
+<         }
+< 
+<         return true;
+---
+>     	return this.whiteboard;
+53a27
+>     @Override
+55c29
+<         if (this.userHasBookingAlready(u) || !this.available(i) || !startBeforeEnd(i)) {
+---
+>         if (this.userHasBookingAlready(u)) {
+58,62c32
+< 
+<         Booking b = new Booking(i, u);
+<         bs.add(b);
+< 
+<         return Optional.of(b);
+---
+>         return super.book(i, u);
+75,78d44
+<     private static boolean startBeforeEnd(Interval i) {
+<         return !(i.getEnd().isBefore(i.getStart()) || i.getStart().isBefore(LocalDateTime.now()));
+<     }
+< 
+82c48
+<             && Objects.equals(this.hasWhiteboard(), ((GroupRoom) o).hasWhiteboard());
+---
+>             && Objects.equals(this.hasWhiteboard(), ((GroupRoom)o).hasWhiteboard());
+88,97d53
+<     }
+< 
+<     @Override
+<     public String toString() {
+<         return String.format(
+<                 "Room %s \"%s\" #bookings: %s",
+<                 this.getName(),
+<                 this.getDescription(),
+<                 this.getBookings().size()
+<         );
+diff -rdBEZN ../../../Scenarios/booking/high_debt/booking/Room.java .submission/booking/Room.java
+2a3,5
+> import java.time.LocalDateTime;
+> import java.time.temporal.ChronoField;
+> import java.util.LinkedList;
+3a7
+> import java.util.Objects;
+6,11c10,41
+< public interface Room {
+<     String getName();
+<     String getDescription();
+<     List<Booking> getBookings();
+<     Optional<Booking> book(Interval i, User u);
+< }
+---
+> public class Room {
+> 
+>     private final String name;
+>     private final String description;
+> 
+>     private final List<Booking> bs = new LinkedList<>();
+> 
+>     public Room(String name, String description) {
+>         this.name = name;
+>         this.description = description;
+>     }
+> 
+>     public String getName() {
+>         return this.name;
+>     }
+> 
+>     public String getDescription() {
+>         return this.description;
+>     }
+> 
+>     public List<Booking> getBookings() {
+>         return List.copyOf(this.bs);
+>     }
+> 
+>     private boolean available(Interval i) {
+>         for (Booking b : this.getBookings()) {
+>             if (b.getInterval().overlapsWith(i)) {
+>                 return false;
+>             }
+>         }
+>         return true;
+>     }
+12a43,83
+>     public Optional<Booking> book(Interval i, User u) {
+>         if (!available(i) || !startBeforeEnd(i)) {
+>             return Optional.empty();
+>         }
+> 
+>         Booking b = new Booking(i, u);
+>         bs.add(b);
+> 
+>         return Optional.of(b);
+>     }
+> 
+>     private static boolean startBeforeEnd(Interval i) {
+>         return !(i.getEnd().isBefore(i.getStart()) || i.getStart().isBefore(LocalDateTime.now()));
+>     }
+> 
+>     @Override
+>     public boolean equals(Object o) {
+>         return super.equals(o)
+>             && Objects.equals(this.getName(), ((Room)o).getName())
+>             && Objects.equals(this.getDescription(), ((Room)o).getDescription());
+>     }
+> 
+>     @Override
+>     public int hashCode() {
+>         return Objects.hash(
+>         	super.hashCode(),
+>         	this.getName(),
+>         	this.getDescription()
+>         );
+>     }
+> 
+>     @Override
+>     public String toString() {
+>         return String.format(
+>                 "Room %s \"%s\" #bookings: %s",
+>                 this.getName(),
+>                 this.getDescription(),
+>                 this.getBookings().size()
+>         );
+>     }
+> }

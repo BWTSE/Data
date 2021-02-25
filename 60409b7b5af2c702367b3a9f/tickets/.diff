@@ -1,0 +1,50 @@
+diff -rdBEZN ../../../Scenarios/tickets/low_debt/tickets/TicketTypeSeasonalRestricted.java .submission/tickets/TicketTypeSeasonalRestricted.java
+0a1,48
+> 
+> package tickets;
+> 
+> import java.util.Objects;
+> import java.util.Set;
+> 
+> public class TicketTypeSeasonalRestricted extends TicketType {
+> 
+>     private final Season validSeason;
+>     private final Set<User.Occupation> occupations;
+> 
+>     public TicketTypeSeasonalRestricted(String name, double price, Set<Zone> validZones, Season validSeason, Set<User.Occupation> occupations) {
+>         super(name, price, validZones);
+>         this.validSeason = validSeason;
+>         this.occupations = occupations;
+>     }
+> 
+>     /*
+>     Make sure that the trip is during the correct season and occupation.
+>      */
+>     @Override
+>     public boolean isValidFor(Trip trip, User user) {
+>         return super.isValidFor(trip, user)
+>             && this.getValidSeason().isDateWithin(trip.getTripStartTime())
+>             && this.getValidOccupations().contains(user.getOccupation());
+>     }
+> 
+>     public Season getValidSeason() {
+>         return this.validSeason;
+>     }
+>     
+>     public Set<User.Occupation> getValidOccupations() {
+>         return this.occupations;
+>     }
+> 
+>     @Override
+>     public boolean equals(Object o) {
+>         return super.equals(o)
+>             && Objects.equals(this.getValidSeason(), ((TicketTypeSeasonal) o).getValidSeason());
+>     }
+> 
+>     @Override
+>     public int hashCode() {
+>         return Objects.hash(
+>             super.hashCode(), this.getValidSeason()
+>         );
+>     }
+> }

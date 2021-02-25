@@ -1,0 +1,32 @@
+{
+    "task_completion": "Completed",
+    "reused_logic_constructor": true,
+    "reused_logic_validation": true,
+    "reused_logic_equals": true,
+    "reused_logic_hashcode": true,
+    "copied_variable_names_all": [
+        "i",
+        "u",
+        "o"
+    ],
+    "copied_variable_names_bad": [
+        "i",
+        "u"
+    ],
+    "new_variable_names_all": [
+        "classRoom",
+        "opening",
+        "closing",
+        "classRoom",
+        "opening",
+        "closing"
+    ],
+    "new_variable_names_bad": [],
+    "edited_variable_names_all": [],
+    "edited_variable_names_bad": [],
+    "has_equals": true,
+    "has_hashcode": true,
+    "documentation_state": "None",
+    "large_structure_change": false,
+    "inspection_done": true
+}

@@ -1,0 +1,33 @@
+diff -rdBEZN ../../../Scenarios/booking/high_debt/booking/ComputerClassRoom.java .submission/booking/ComputerClassRoom.java
+0a1,31
+> package booking;
+> 
+> import java.time.LocalDateTime;
+> import java.time.LocalTime;
+> import java.time.LocalDate;
+> import java.time.temporal.ChronoField;
+> import java.util.LinkedList;
+> import java.util.List;
+> import java.util.Objects;
+> import java.util.Optional;
+> 
+> public class ComputerClassRoom extends ClassRoom {
+> 	private final Interval openInterval;
+> 	
+>     private final List<Booking> bs = new LinkedList<>();
+> 
+>     public ComputerClassRoom(String n, String d, boolean p, int o, int c) {
+>     	super(n, d, p);
+>         LocalDateTime openTime = LocalDateTime.of(LocalDate.now(),LocalTime.of(o,0));
+>     	this.openInterval = new Interval(openTime, openTime.plusHours(c));
+>     }
+>     
+>     @Override
+>     public Optional<Booking> book(Interval i, User u) {
+>     	if(!this.openInterval.overlapsWith(i)) {
+>     		return Optional.empty();
+>     	} else {
+>     		return super.book(i, u);
+>     	}
+>     }
+> }

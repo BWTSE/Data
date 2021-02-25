@@ -1,0 +1,18 @@
+{
+    "task_completion": "Not submitted",
+    "reused_logic_constructor": false,
+    "reused_logic_validation": false,
+    "reused_logic_equals": false,
+    "reused_logic_hashcode": false,
+    "copied_variable_names_all": [],
+    "copied_variable_names_bad": [],
+    "new_variable_names_all": [],
+    "new_variable_names_bad": [],
+    "edited_variable_names_all": [],
+    "edited_variable_names_bad": [],
+    "has_equals": false,
+    "has_hashcode": false,
+    "documentation_state": "None",
+    "large_structure_change": false,
+    "inspection_done": true
+}

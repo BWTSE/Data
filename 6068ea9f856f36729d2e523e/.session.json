@@ -1,0 +1,15 @@
+{
+    "signup_code": "cup-cd",
+    "background_answers": {
+        "education_level": "None",
+        "education_field": "none",
+        "work_experience": "4",
+        "work_experience_java": "4",
+        "work_domain": "retail",
+        "workplace_peer_review": false,
+        "workplace_pair_programming": false,
+        "workplace_td_tracking": true,
+        "workplace_coding_standards": false
+    },
+    "repeat_of": ""
+}

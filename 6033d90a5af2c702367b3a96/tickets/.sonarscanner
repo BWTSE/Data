@@ -1,0 +1,367 @@
+INFO: Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: SonarScanner 4.5.0.2216
+INFO: Java 15.0.2 AdoptOpenJDK (64-bit)
+INFO: Linux 5.11.2-arch1-1 amd64
+INFO: User cache: /home/gurgy/.sonar/cache
+INFO: Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+INFO: Project root configuration file: NONE
+INFO: Analyzing on SonarQube server 8.4.2
+INFO: Default locale: "en_US", source code encoding: "UTF-8" (analysis is platform dependent)
+INFO: Load global settings
+INFO: Load global settings (done) | time=286ms
+INFO: Server id: BF41A1F2-AXRis_C3qIKX52rsj1Qt
+INFO: User cache: /home/gurgy/.sonar/cache
+INFO: Load/download plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=76ms
+INFO: Load/download plugins (done) | time=99ms
+INFO: Process project properties
+INFO: Process project properties (done) | time=5ms
+INFO: Project key: tickets-low-6033d90a5af2c702367b3a96
+INFO: Base dir: /home/gurgy/Projects/RobotResearcher/submissions/6033d90a5af2c702367b3a96/tickets
+INFO: Working dir: /home/gurgy/Projects/RobotResearcher/submissions/6033d90a5af2c702367b3a96/tickets/.scannerwork
+INFO: Load project settings for component key: 'tickets-low-6033d90a5af2c702367b3a96'
+INFO: Load project settings for component key: 'tickets-low-6033d90a5af2c702367b3a96' (done) | time=54ms
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=110ms
+INFO: Load active rules
+INFO: Load active rules (done) | time=2923ms
+INFO: Exclusions based on SCM info is disabled by configuration
+INFO: Indexing files...
+INFO: Project configuration:
+INFO:   Excluded sources: */Main.java
+INFO: 11 files indexed
+INFO: 0 files ignored because of inclusion/exclusion patterns
+INFO: Quality profile for java: All
+INFO: ------------- Run sensors on module tickets-low-6033d90a5af2c702367b3a96
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=64ms
+INFO: Sensor JavaSquidSensor [java]
+INFO: Configured Java source version (sonar.java.source): none
+INFO: JavaClasspath initialization
+WARN: Bytecode of dependencies was not provided for analysis of source files, you might end up with less precise results. Bytecode can be provided using sonar.java.libraries property.
+INFO: JavaClasspath initialization (done) | time=6ms
+INFO: JavaTestClasspath initialization
+INFO: JavaTestClasspath initialization (done) | time=0ms
+INFO: Java Main Files AST scan
+INFO: 11 source files to be analyzed
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=54ms
+ERROR: Unable to run check class org.codehawk.plugin.java.checks.UnexploitedEncapsulation - UnexploitedEncapsulation on file '.submission/tickets/TicketTypeSeasonalRestricted.java', To help improve the SonarSource Java Analyzer, please report this problem to SonarSource: see https://community.sonarsource.com/
+java.lang.NullPointerException: Cannot invoke "org.sonar.plugins.java.api.tree.ClassTree.members()" because "exct" is null
+	at org.codehawk.plugin.java.checks.UnexploitedEncapsulation.visitNode(UnexploitedEncapsulation.java:35)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.lambda$visit$6(VisitorsBridge.java:311)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.lambda$forEach$9(VisitorsBridge.java:326)
+	at org.sonar.java.model.VisitorsBridge.runScanner(VisitorsBridge.java:189)
+	at org.sonar.java.model.VisitorsBridge.access$100(VisitorsBridge.java:66)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.forEach(VisitorsBridge.java:326)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.visit(VisitorsBridge.java:313)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.visitChildren(VisitorsBridge.java:297)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.visit(VisitorsBridge.java:317)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.run(VisitorsBridge.java:288)
+	at org.sonar.java.model.VisitorsBridge.visitFile(VisitorsBridge.java:171)
+	at org.sonar.java.ast.JavaAstScanner.simpleScan(JavaAstScanner.java:98)
+	at org.sonar.java.ast.JavaAstScanner.scan(JavaAstScanner.java:64)
+	at org.sonar.java.JavaSquid.scanSources(JavaSquid.java:120)
+	at org.sonar.java.JavaSquid.scan(JavaSquid.java:113)
+	at org.sonar.plugins.java.JavaSquidSensor.execute(JavaSquidSensor.java:103)
+	at org.sonar.scanner.sensor.AbstractSensorWrapper.analyse(AbstractSensorWrapper.java:48)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.execute(ModuleSensorsExecutor.java:85)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.lambda$execute$1(ModuleSensorsExecutor.java:59)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.withModuleStrategy(ModuleSensorsExecutor.java:77)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.execute(ModuleSensorsExecutor.java:59)
+	at org.sonar.scanner.scan.ModuleScanContainer.doAfterStart(ModuleScanContainer.java:82)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:137)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:123)
+	at org.sonar.scanner.scan.ProjectScanContainer.scan(ProjectScanContainer.java:388)
+	at org.sonar.scanner.scan.ProjectScanContainer.scanRecursively(ProjectScanContainer.java:384)
+	at org.sonar.scanner.scan.ProjectScanContainer.doAfterStart(ProjectScanContainer.java:353)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:137)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:123)
+	at org.sonar.scanner.bootstrap.GlobalContainer.doAfterStart(GlobalContainer.java:144)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:137)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:123)
+	at org.sonar.batch.bootstrapper.Batch.doExecute(Batch.java:72)
+	at org.sonar.batch.bootstrapper.Batch.execute(Batch.java:66)
+	at org.sonarsource.scanner.api.internal.batch.BatchIsolatedLauncher.execute(BatchIsolatedLauncher.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherProxy.invoke(IsolatedLauncherProxy.java:60)
+	at com.sun.proxy.$Proxy0.execute(Unknown Source)
+	at org.sonarsource.scanner.api.EmbeddedScanner.doExecute(EmbeddedScanner.java:189)
+	at org.sonarsource.scanner.api.EmbeddedScanner.execute(EmbeddedScanner.java:138)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:112)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:75)
+	at org.sonarsource.scanner.cli.Main.main(Main.java:61)
+
+ticketTypes
+use in:find
+use in:getTicketTypes
+find
+use in:TicketFinder
+use in:TicketFinder
+getTicketTypes
+TicketFinder
+startZone
+use in:getStartZone
+endZone
+use in:getEndZone
+tripStartTime
+use in:getTripStartTime
+getStartZone
+use in:Trip
+use in:Trip
+use in:Trip
+use in:Trip
+getEndZone
+use in:Trip
+use in:Trip
+use in:Trip
+use in:Trip
+getTripStartTime
+use in:Trip
+use in:Trip
+use in:Trip
+use in:Trip
+Trip
+alice
+use in:main
+bob
+use in:main
+carl
+use in:main
+centrumOnly
+centrumPlus
+allZones
+centralSingleDay
+use in:main
+centralWinter
+use in:main
+centralSummer
+use in:main
+centrumPlusSingle
+use in:main
+retireeWinter
+use in:main
+use in:main
+use in:main
+use in:main
+allSingleDay
+use in:main
+studentWinter
+use in:main
+use in:main
+use in:main
+use in:main
+main
+Main
+ERROR: Unable to run check class org.codehawk.plugin.java.checks.UnexploitedEncapsulation - UnexploitedEncapsulation on file '.submission/tickets/TicketTypeSeasonal.java', To help improve the SonarSource Java Analyzer, please report this problem to SonarSource: see https://community.sonarsource.com/
+java.lang.NullPointerException: Cannot invoke "org.sonar.plugins.java.api.tree.ClassTree.members()" because "exct" is null
+	at org.codehawk.plugin.java.checks.UnexploitedEncapsulation.visitNode(UnexploitedEncapsulation.java:35)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.lambda$visit$6(VisitorsBridge.java:311)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.lambda$forEach$9(VisitorsBridge.java:326)
+	at org.sonar.java.model.VisitorsBridge.runScanner(VisitorsBridge.java:189)
+	at org.sonar.java.model.VisitorsBridge.access$100(VisitorsBridge.java:66)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.forEach(VisitorsBridge.java:326)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.visit(VisitorsBridge.java:313)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.visitChildren(VisitorsBridge.java:297)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.visit(VisitorsBridge.java:317)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.run(VisitorsBridge.java:288)
+	at org.sonar.java.model.VisitorsBridge.visitFile(VisitorsBridge.java:171)
+	at org.sonar.java.ast.JavaAstScanner.simpleScan(JavaAstScanner.java:98)
+	at org.sonar.java.ast.JavaAstScanner.scan(JavaAstScanner.java:64)
+	at org.sonar.java.JavaSquid.scanSources(JavaSquid.java:120)
+	at org.sonar.java.JavaSquid.scan(JavaSquid.java:113)
+	at org.sonar.plugins.java.JavaSquidSensor.execute(JavaSquidSensor.java:103)
+	at org.sonar.scanner.sensor.AbstractSensorWrapper.analyse(AbstractSensorWrapper.java:48)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.execute(ModuleSensorsExecutor.java:85)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.lambda$execute$1(ModuleSensorsExecutor.java:59)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.withModuleStrategy(ModuleSensorsExecutor.java:77)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.execute(ModuleSensorsExecutor.java:59)
+	at org.sonar.scanner.scan.ModuleScanContainer.doAfterStart(ModuleScanContainer.java:82)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:137)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:123)
+	at org.sonar.scanner.scan.ProjectScanContainer.scan(ProjectScanContainer.java:388)
+	at org.sonar.scanner.scan.ProjectScanContainer.scanRecursively(ProjectScanContainer.java:384)
+	at org.sonar.scanner.scan.ProjectScanContainer.doAfterStart(ProjectScanContainer.java:353)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:137)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:123)
+	at org.sonar.scanner.bootstrap.GlobalContainer.doAfterStart(GlobalContainer.java:144)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:137)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:123)
+	at org.sonar.batch.bootstrapper.Batch.doExecute(Batch.java:72)
+	at org.sonar.batch.bootstrapper.Batch.execute(Batch.java:66)
+	at org.sonarsource.scanner.api.internal.batch.BatchIsolatedLauncher.execute(BatchIsolatedLauncher.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherProxy.invoke(IsolatedLauncherProxy.java:60)
+	at com.sun.proxy.$Proxy0.execute(Unknown Source)
+	at org.sonarsource.scanner.api.EmbeddedScanner.doExecute(EmbeddedScanner.java:189)
+	at org.sonarsource.scanner.api.EmbeddedScanner.execute(EmbeddedScanner.java:138)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:112)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:75)
+	at org.sonarsource.scanner.cli.Main.main(Main.java:61)
+
+name
+use in:getName
+email
+use in:getEmail
+age
+use in:getAge
+occupation
+use in:getOccupation
+getName
+use in:User
+getEmail
+use in:User
+use in:User
+use in:User
+use in:User
+getAge
+getOccupation
+User
+ERROR: Unable to run check class org.codehawk.plugin.java.checks.UnexploitedEncapsulation - UnexploitedEncapsulation on file '.submission/tickets/TicketTypeSingle.java', To help improve the SonarSource Java Analyzer, please report this problem to SonarSource: see https://community.sonarsource.com/
+java.lang.NullPointerException: Cannot invoke "org.sonar.plugins.java.api.tree.ClassTree.members()" because "exct" is null
+	at org.codehawk.plugin.java.checks.UnexploitedEncapsulation.visitNode(UnexploitedEncapsulation.java:35)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.lambda$visit$6(VisitorsBridge.java:311)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.lambda$forEach$9(VisitorsBridge.java:326)
+	at org.sonar.java.model.VisitorsBridge.runScanner(VisitorsBridge.java:189)
+	at org.sonar.java.model.VisitorsBridge.access$100(VisitorsBridge.java:66)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.forEach(VisitorsBridge.java:326)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.visit(VisitorsBridge.java:313)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.visitChildren(VisitorsBridge.java:297)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.visit(VisitorsBridge.java:317)
+	at org.sonar.java.model.VisitorsBridge$IssuableSubsciptionVisitorsRunner.run(VisitorsBridge.java:288)
+	at org.sonar.java.model.VisitorsBridge.visitFile(VisitorsBridge.java:171)
+	at org.sonar.java.ast.JavaAstScanner.simpleScan(JavaAstScanner.java:98)
+	at org.sonar.java.ast.JavaAstScanner.scan(JavaAstScanner.java:64)
+	at org.sonar.java.JavaSquid.scanSources(JavaSquid.java:120)
+	at org.sonar.java.JavaSquid.scan(JavaSquid.java:113)
+	at org.sonar.plugins.java.JavaSquidSensor.execute(JavaSquidSensor.java:103)
+	at org.sonar.scanner.sensor.AbstractSensorWrapper.analyse(AbstractSensorWrapper.java:48)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.execute(ModuleSensorsExecutor.java:85)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.lambda$execute$1(ModuleSensorsExecutor.java:59)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.withModuleStrategy(ModuleSensorsExecutor.java:77)
+	at org.sonar.scanner.sensor.ModuleSensorsExecutor.execute(ModuleSensorsExecutor.java:59)
+	at org.sonar.scanner.scan.ModuleScanContainer.doAfterStart(ModuleScanContainer.java:82)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:137)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:123)
+	at org.sonar.scanner.scan.ProjectScanContainer.scan(ProjectScanContainer.java:388)
+	at org.sonar.scanner.scan.ProjectScanContainer.scanRecursively(ProjectScanContainer.java:384)
+	at org.sonar.scanner.scan.ProjectScanContainer.doAfterStart(ProjectScanContainer.java:353)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:137)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:123)
+	at org.sonar.scanner.bootstrap.GlobalContainer.doAfterStart(GlobalContainer.java:144)
+	at org.sonar.core.platform.ComponentContainer.startComponents(ComponentContainer.java:137)
+	at org.sonar.core.platform.ComponentContainer.execute(ComponentContainer.java:123)
+	at org.sonar.batch.bootstrapper.Batch.doExecute(Batch.java:72)
+	at org.sonar.batch.bootstrapper.Batch.execute(Batch.java:66)
+	at org.sonarsource.scanner.api.internal.batch.BatchIsolatedLauncher.execute(BatchIsolatedLauncher.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.sonarsource.scanner.api.internal.IsolatedLauncherProxy.invoke(IsolatedLauncherProxy.java:60)
+	at com.sun.proxy.$Proxy0.execute(Unknown Source)
+	at org.sonarsource.scanner.api.EmbeddedScanner.doExecute(EmbeddedScanner.java:189)
+	at org.sonarsource.scanner.api.EmbeddedScanner.execute(EmbeddedScanner.java:138)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:112)
+	at org.sonarsource.scanner.cli.Main.execute(Main.java:75)
+	at org.sonarsource.scanner.cli.Main.main(Main.java:61)
+
+ticketType
+use in:getTicketType
+use in:isValidFor
+user
+use in:getUser
+timeOfPurchase
+use in:getTimeOfPurchase
+getTicketType
+use in:Ticket
+use in:Ticket
+use in:Ticket
+use in:Ticket
+isValidFor
+getUser
+use in:Ticket
+use in:Ticket
+use in:Ticket
+getTimeOfPurchase
+use in:Ticket
+use in:Ticket
+use in:Ticket
+Ticket
+name
+use in:getName
+price
+use in:getPrice
+validZones
+use in:getValidZones
+getName
+use in:TicketType
+use in:TicketType
+use in:TicketType
+use in:TicketType
+getPrice
+use in:TicketType
+use in:TicketType
+use in:TicketType
+getValidZones
+use in:TicketType
+use in:TicketType
+use in:TicketType
+use in:TicketType
+use in:TicketType
+TicketType
+INFO: 11/11 source files have been analyzed
+INFO: Java Main Files AST scan (done) | time=2207ms
+INFO: Java Test Files AST scan
+INFO: 0 source files to be analyzed
+INFO: Java Test Files AST scan (done) | time=1ms
+INFO: 0/0 source files have been analyzed
+INFO: Java Generated Files AST scan
+INFO: 0 source files to be analyzed
+INFO: Java Generated Files AST scan (done) | time=0ms
+INFO: 0/0 source files have been analyzed
+INFO: Sensor JavaSquidSensor [java] (done) | time=2332ms
+INFO: Sensor FindBugs Sensor [findbugs]
+INFO: Loading findbugs plugin: /home/gurgy/Projects/RobotResearcher/submissions/6033d90a5af2c702367b3a96/tickets/.scannerwork/findbugs/sb-contrib.jar
+INFO: Loading findbugs plugin: /home/gurgy/Projects/RobotResearcher/submissions/6033d90a5af2c702367b3a96/tickets/.scannerwork/findbugs/findsecbugs-plugin.jar
+INFO: Findbugs output report: /home/gurgy/Projects/RobotResearcher/submissions/6033d90a5af2c702367b3a96/tickets/.scannerwork/findbugs-result.xml
+INFO: Sensor FindBugs Sensor [findbugs] (done) | time=5231ms
+INFO: Sensor SurefireSensor [java]
+INFO: parsing [/home/gurgy/Projects/RobotResearcher/submissions/6033d90a5af2c702367b3a96/tickets/target/surefire-reports]
+INFO: Sensor SurefireSensor [java] (done) | time=1ms
+INFO: Sensor JavaXmlSensor [java]
+INFO: Sensor JavaXmlSensor [java] (done) | time=1ms
+INFO: Sensor CheckstyleSensor [checkstyle]
+INFO: Checkstyle output report: /home/gurgy/Projects/RobotResearcher/submissions/6033d90a5af2c702367b3a96/tickets/.scannerwork/checkstyle-result.xml
+INFO: Checkstyle configuration: /home/gurgy/Projects/RobotResearcher/submissions/6033d90a5af2c702367b3a96/tickets/.scannerwork/checkstyle.xml
+INFO: Checkstyle charset: UTF-8
+INFO: Sensor CheckstyleSensor [checkstyle] (done) | time=933ms
+INFO: ------------- Run sensors on project
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=9ms
+INFO: Sensor Java CPD Block Indexer
+INFO: Sensor Java CPD Block Indexer (done) | time=48ms
+INFO: CPD Executor 2 files had no CPD blocks
+INFO: CPD Executor Calculating CPD for 9 files
+INFO: CPD Executor CPD calculation finished (done) | time=9ms
+INFO: Analysis report generated in 222ms, dir size=202 KB
+INFO: Analysis report compressed in 62ms, zip size=58 KB
+INFO: Analysis report uploaded in 110ms
+INFO: ANALYSIS SUCCESSFUL, you can browse https://sonarqube.sidus.io/dashboard?id=tickets-low-6033d90a5af2c702367b3a96
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at https://sonarqube.sidus.io/api/ce/task?id=AXhajZVh-3MEebgqC_7_
+INFO: Analysis total time: 12.706 s
+INFO: ------------------------------------------------------------------------
+INFO: EXECUTION SUCCESS
+INFO: ------------------------------------------------------------------------
+INFO: Total time: 14.014s
+INFO: Final Memory: 27M/114M
+INFO: ------------------------------------------------------------------------

@@ -1,0 +1,327 @@
+diff -rdBEZN ../../../Scenarios/tickets/low_debt/tickets/Main.java .submission/tickets/Main.java
+20c20
+<         new TicketTypeSingle("Single Central Day", 29, centrumOnly, 5, 22);
+---
+>         new TicketType("Single Central Day", 29, new ZoneRestriction(centrumOnly), new TimeRestriction(5, 22));
+22c22
+<         new TicketTypeSeasonal("Central Winter Ticket", 149, centrumOnly, Season.WINTER);
+---
+>         new TicketType("Central Winter Ticket", 149, new ZoneRestriction(centrumOnly), new SeasonRestriction(Season.WINTER));
+24c24
+<         new TicketTypeSeasonal("Central Summer Ticket", 749, centrumOnly, Season.SUMMER);
+---
+>         new TicketType("Central Summer Ticket", 749, new ZoneRestriction(centrumOnly), new SeasonRestriction(Season.SUMMER));
+26c26
+<         new TicketTypeSingle("Single Central + Suburbs Day", 49, centrumPlus, 4, 0);
+---
+>         new TicketType("Single Central + Suburbs Day", 49, new ZoneRestriction(centrumPlus), new TimeRestriction(4, 0));
+28,29c28,29
+<         new TicketTypeSeasonalRestricted("Retiree Winter Ticket", 199.0, centrumPlus, Season.WINTER, 
+<         EnumSet.of(User.Occupation.RETIREE));
+---
+>         new TicketType("Retiree Winter Ticket", 199.0, new ZoneRestriction(centrumPlus), new SeasonRestriction(Season.WINTER), 
+>         new OccupationRestriction(EnumSet.of(User.Occupation.RETIREE)));
+31c31
+<         new TicketTypeSingle("Single All Regions Day", 69, allZones,5, 22);
+---
+>         new TicketType("Single All Regions Day", 69, new ZoneRestriction(allZones), new TimeRestriction(5, 22));
+33,34c33,34
+<         new TicketTypeSeasonalRestricted( "Student Winter Ticket", 199.0, allZones, Season.WINTER, 
+<         EnumSet.of(User.Occupation.STUDENT));
+---
+>         new TicketType( "Student Winter Ticket", 199.0, new ZoneRestriction(allZones), new SeasonRestriction(Season.WINTER),  
+>         new OccupationRestriction(EnumSet.of(User.Occupation.STUDENT)));
+53a55,85
+>         ZoneRestriction centrumRestriction = new ZoneRestriction(centrumOnly);
+>         if (centrumRestriction.isValidFor(new Trip(Zone.CENTRAL, Zone.SUBURB, time), alice) 
+>         && !centrumRestriction.isValidFor(new Trip(Zone.CENTRAL, Zone.CENTRAL, time), alice)) {
+>         	System.out.println("ZoneRestriction doesn't work");
+>         }
+>         
+>         SeasonRestriction summerRestriction = new SeasonRestriction(Season.SUMMER);
+>         if (summerRestriction.isValidFor(new Trip(Zone.CENTRAL, Zone.SUBURB, LocalDateTime.of(2021, 12, 15, 5, 0)), alice)
+>         && !summerRestriction.isValidFor(new Trip(Zone.CENTRAL, Zone.SUBURB, LocalDateTime.of(2021, 6, 15, 5, 0)), alice)) {
+>         	System.out.println("SeasonRestriction doesn't work");
+>         }
+>         
+>         TimeRestriction dayRestriction = new TimeRestriction(6, 18);
+>         if (dayRestriction.isValidFor(new Trip(Zone.CENTRAL, Zone.SUBURB, LocalDateTime.of(2021, 12, 15, 5, 0)), alice)
+>         && !dayRestriction.isValidFor(new Trip(Zone.CENTRAL, Zone.SUBURB, LocalDateTime.of(2021, 12, 15, 14, 0)), alice)) {
+>         	System.out.println("Day TimeRestriction doesn't work");
+>         }
+>         
+>         TimeRestriction nighRestriction = new TimeRestriction(18, 6);
+>         if (nighRestriction.isValidFor(new Trip(Zone.CENTRAL, Zone.SUBURB, LocalDateTime.of(2021, 12, 15, 14, 0)), alice)
+>         && !nighRestriction.isValidFor(new Trip(Zone.CENTRAL, Zone.SUBURB, LocalDateTime.of(2021, 12, 15, 3, 0)), alice)) {
+>         	System.out.println("Night TimeRestriction doesn't work");
+>         }
+>         
+>         OccupationRestriction studentRestriction = new OccupationRestriction(EnumSet.of(User.Occupation.STUDENT));
+>         if (studentRestriction.isValidFor(new Trip(Zone.CENTRAL, Zone.SUBURB, time), alice) 
+>         && !studentRestriction.isValidFor(new Trip(Zone.CENTRAL, Zone.CENTRAL, time), carl)) {
+>         	System.out.println("ZoneRestriction doesn't work");
+>         }
+>         
+> 
+61,67d92
+<         for (TicketType ticket : aliceTickets) {
+<             if (!ticket.getValidZones().containsAll(EnumSet.of(Zone.SUBURB, Zone.CENTRAL))) {
+<                 System.out.println("Alice found ticket that isnt valid for her trip:");
+<                 System.out.println(ticket.getName());
+<             }
+<         }
+<     
+76,81d100
+<         for (TicketType ticket : bobTickets) {
+<             if (!ticket.getValidZones().contains(Zone.CENTRAL)) {
+<                 System.out.println("Bob found ticket that isn't valid for his trip:");
+<                 System.out.println(ticket.getName());
+<             }
+<         }
+92,97d110
+<         for (TicketType ticket : carlTickets) {
+<             if (!ticket.getValidZones().contains(Zone.CENTRAL)) {
+<                 System.out.println("Carl found ticket that isn't valid for his trip:");
+<                 System.out.println(ticket.getName());
+<             }
+<         }
+diff -rdBEZN ../../../Scenarios/tickets/low_debt/tickets/OccupationRestriction.java .submission/tickets/OccupationRestriction.java
+0a1,19
+> 
+> package tickets;
+> 
+> import java.util.EnumSet;
+> import java.util.Set;
+> 
+> public class OccupationRestriction implements Restriction {
+> 
+> 	private final Set<User.Occupation> validOccupations;
+> 	
+> 	public OccupationRestriction(Set<User.Occupation> validOccupations) {
+> 		this.validOccupations = EnumSet.copyOf(validOccupations);
+> 	}
+> 	
+> 	public boolean isValidFor(Trip trip, User user) {
+> 		return validOccupations.contains(user.getOccupation());
+> 	}
+> 	
+> }
+\ No newline at end of file
+diff -rdBEZN ../../../Scenarios/tickets/low_debt/tickets/Restriction.java .submission/tickets/Restriction.java
+0a1,8
+> 
+> package tickets;
+> 
+> public interface Restriction {
+> 	
+> 	boolean isValidFor(Trip trip, User user);
+> 	
+> }
+\ No newline at end of file
+diff -rdBEZN ../../../Scenarios/tickets/low_debt/tickets/SeasonRestriction.java .submission/tickets/SeasonRestriction.java
+0a1,15
+> 
+> package tickets;
+> 
+> public class SeasonRestriction implements Restriction {
+> 	
+> 	private final Season validSeason;
+> 	
+> 	public SeasonRestriction(Season validSeason) {
+> 		this.validSeason = validSeason;
+> 	}
+> 	
+> 	public boolean isValidFor(Trip trip, User user) {
+> 		return validSeason.isDateWithin(trip.getTripStartTime());
+> 	}
+> }
+\ No newline at end of file
+diff -rdBEZN ../../../Scenarios/tickets/low_debt/tickets/TicketType.java .submission/tickets/TicketType.java
+10c10
+<     private final Set<Zone> validZones;
+---
+>     private final Restriction[] restrictions;
+12c12
+<     protected TicketType(String name, double price, Set<Zone> validZones) {
+---
+>     protected TicketType(String name, double price, Restriction...restrictions) {
+15c15
+<         this.validZones = EnumSet.copyOf(validZones);
+---
+>         this.restrictions = restrictions;
+26,29d25
+<     public Set<Zone> getValidZones() {
+<         return EnumSet.copyOf(this.validZones);
+<     }
+< 
+34,35c30,35
+<         return this.getValidZones().contains(trip.getStartZone())
+<             && this.getValidZones().contains(trip.getEndZone());
+---
+>         for(Restriction restriction : restrictions) {
+>         	if (!restriction.isValidFor(trip, user)) {
+>         		return false;
+>         	}
+>         }
+>         return true;
+50d49
+<             && Objects.equals(this.getValidZones(), ticketType.getValidZones())
+56c55
+<         return Objects.hash(this.getName(), this.getValidZones(), this.getPrice());
+---
+>         return Objects.hash(this.getName(), this.getPrice());
+diff -rdBEZN ../../../Scenarios/tickets/low_debt/tickets/TicketTypeSeasonal.java .submission/tickets/TicketTypeSeasonal.java
+1,40d0
+< package tickets;
+< 
+< import java.util.Objects;
+< import java.util.Set;
+< 
+< public class TicketTypeSeasonal extends TicketType {
+< 
+<     private final Season validSeason;
+< 
+<     public TicketTypeSeasonal(String name, double price, Set<Zone> validZones, Season validSeason) {
+<         super(name, price, validZones);
+<         this.validSeason = validSeason;
+<     }
+< 
+<     /*
+<     Make sure that the trip is during the correct season.
+<      */
+<     @Override
+<     public boolean isValidFor(Trip trip, User user) {
+<         return super.isValidFor(trip, user)
+<             && this.getValidSeason().isDateWithin(trip.getTripStartTime());
+<     }
+< 
+<     public Season getValidSeason() {
+<         return this.validSeason;
+<     }
+< 
+<     @Override
+<     public boolean equals(Object o) {
+<         return super.equals(o)
+<             && Objects.equals(this.getValidSeason(), ((TicketTypeSeasonal) o).getValidSeason());
+<     }
+< 
+<     @Override
+<     public int hashCode() {
+<         return Objects.hash(
+<             super.hashCode(), this.getValidSeason()
+<         );
+<     }
+< }
+diff -rdBEZN ../../../Scenarios/tickets/low_debt/tickets/TicketTypeSingle.java .submission/tickets/TicketTypeSingle.java
+1,62d0
+< package tickets;
+< 
+< import java.util.Objects;
+< import java.util.Set;
+< 
+< public class TicketTypeSingle extends TicketType {
+< 
+<     private final int startHour;
+<     private final int endHour;
+< 
+<     public TicketTypeSingle(
+<         String name,  
+<         double price, 
+<         Set<Zone> validZones, 
+<         int startHour,
+<         int endHour
+<     ) {
+<         super(name, price, validZones);
+<         this.startHour = startHour;
+<         this.endHour = endHour;
+<     }
+< 
+<     /*
+<     Makes sure that the trip is during the right time of the day.
+<      */
+<     @Override
+<     public boolean isValidFor(Trip trip, User user) {
+<         if (this.startHour < this.endHour) {
+<             return
+<                 trip.getTripStartTime().getHour() >= this.startHour 
+<                 && trip.getTripStartTime().getHour() < this.endHour
+<                 && super.isValidFor(trip, user);
+<         } else {
+<             return
+<                 (
+<                     trip.getTripStartTime().getHour() >= this.startHour
+<                     || trip.getTripStartTime().getHour() > this.endHour
+<                 )
+<                 && super.isValidFor(trip, user);
+<         }
+<     }
+< 
+<     public int getStartHour() {
+<         return this.startHour;
+<     }
+< 
+<     public int getEndHour() {
+<         return this.endHour;
+<     }
+< 
+<     @Override
+<     public boolean equals(Object o) {
+<         return super.equals(o)
+<             && Objects.equals(this.getStartHour(), ((TicketTypeSingle) o).getStartHour())
+<             && Objects.equals(this.getEndHour(), ((TicketTypeSingle) o).getEndHour());
+<     }
+< 
+<     @Override
+<     public int hashCode() {
+<         return Objects.hash(super.hashCode(), this.getStartHour(), this.getEndHour());
+<     }
+< }
+diff -rdBEZN ../../../Scenarios/tickets/low_debt/tickets/TimeRestriction.java .submission/tickets/TimeRestriction.java
+0a1,24
+> 
+> package tickets;
+> 
+> public class TimeRestriction implements Restriction {
+> 	
+> 	private final int startHour;
+>     private final int endHour;
+>     
+>     public TimeRestriction(int startHour, int endHour) {
+>     	this.startHour = startHour;
+>     	this.endHour = endHour;
+>     }
+>     
+>     public boolean isValidFor(Trip trip, User user) {
+>     	if (this.startHour < this.endHour) {
+>             return
+>                 trip.getTripStartTime().getHour() >= this.startHour 
+>                 && trip.getTripStartTime().getHour() < this.endHour;
+>         } else {
+>             return trip.getTripStartTime().getHour() >= this.startHour
+>                     || trip.getTripStartTime().getHour() < this.endHour;
+>         }
+>     }
+> }
+\ No newline at end of file
+diff -rdBEZN ../../../Scenarios/tickets/low_debt/tickets/ZoneRestriction.java .submission/tickets/ZoneRestriction.java
+0a1,19
+> 
+> package tickets;
+> 
+> import java.util.EnumSet;
+> import java.util.Set;
+> 
+> public class ZoneRestriction implements Restriction {
+> 	
+> 	private Set<Zone> validZones;
+> 	
+> 	public ZoneRestriction(Set<Zone> validZones) {
+> 		this.validZones = EnumSet.copyOf(validZones);
+> 	}
+> 	
+> 	public boolean isValidFor(Trip trip, User user) {
+> 		return validZones.contains(trip.getStartZone())
+>             && validZones.contains(trip.getEndZone());
+> 	}
+> }
+\ No newline at end of file

@@ -1,0 +1,25 @@
+diff -rdBEZN ../../../Scenarios/booking/high_debt/booking/ComputerClassRoom.java .submission/booking/ComputerClassRoom.java
+0a1,22
+> package booking;
+> import java.util.Optional;
+> 
+> public class ComputerClassRoom extends ClassRoom {
+> 	private int o;
+> 	private int c;
+> 	public ComputerClassRoom(String n, String d, boolean p, int o, int c){
+> 		super(n,d,p);
+> 		this.o = o;
+> 		this.c = c;
+> 	}
+> 	
+> 	@Override 
+> 	public Optional<Booking> book(Interval i, User u){
+> 		int start = i.getStart().getHour();
+> 		int end = i.getEnd().getHour();
+> 		if(start < o || end > c){
+> 			return Optional.empty();
+> 		}
+> 		return super.book(i,u);
+> 	}
+> }
+\ No newline at end of file

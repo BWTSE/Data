@@ -1,0 +1,122 @@
+package booking;
+
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoField;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
+
+public class ComputerClassRoom implements Room {
+
+    private final String name;
+    private final String description;
+    private boolean hasProjector;
+    private int opens;
+	private int closes;
+
+    private final List<Booking> bs = new LinkedList<>();
+
+    public ComputerClassRoom(String name, String description, boolean hasProjector, int opens, int closes) {
+        this.name = name;
+        this.description = description;
+        this.hasProjector = hasProjector;
+        this.opens = opens;
+        this.closes = closes;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public boolean hasProjector() {
+        return this.hasProjector;
+    }
+    
+    public int getOpenHour() {
+        return this.opens;
+    }
+    
+    public int getCloseHour() {
+        return this.closes;
+    }
+
+    public List<Booking> getBookings() {
+        return List.copyOf(this.bs);
+    }
+
+    private boolean available(Interval interval) {
+        for (Booking booking : this.getBookings()) {
+            if (booking.getInterval().overlapsWith(interval)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /* i.getEnd.isAfter(getClosingTime)
+    Only allows bookings that start on the hour. (Floors second and microsecond values).
+    Also makes sure that the booking is valid and that the room is available.
+    */
+    public Optional<Booking> book(Interval i, User u) {
+    	if ((i.getStart().getHour() < getOpenHour()) || (i.getEnd().getHour() > getCloseHour())) {
+    		return Optional.empty();
+    	}
+    	
+        if (
+            i.getStart().with(ChronoField.HOUR_OF_DAY, 0).isAfter(i.getEnd())
+            || !available(i)
+            || !startAndEndAtHour(i)
+            || !startBeforeEnd(i)
+        ) {
+            return Optional.empty();
+        }
+
+        Booking b = new Booking(i, u);
+        bs.add(b);
+
+        return Optional.of(b);
+    }
+
+    private static boolean startBeforeEnd(Interval i) {
+        return !(i.getEnd().isBefore(i.getStart()) || i.getStart().isBefore(LocalDateTime.now()));
+    }
+
+    private static boolean startAndEndAtHour(Interval i) {
+        LocalDateTime bst = i.getStart()
+            .with(ChronoField.SECOND_OF_MINUTE, 0)
+            .with(ChronoField.NANO_OF_SECOND, 0);
+
+        LocalDateTime bed = i.getStart()
+            .with(ChronoField.SECOND_OF_MINUTE, 0)
+            .with(ChronoField.NANO_OF_SECOND, 0);
+
+        return !(bed.getMinute() != 0|| bed.with(ChronoField.HOUR_OF_DAY, 0).isAfter(bst));
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o)
+            && Objects.equals(this.hasProjector(), ((ClassRoom) o).hasProjector());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), this.hasProjector());
+    }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "Room %s \"%s\" #bookings: %s",
+                this.getName(),
+                this.getDescription(),
+                this.getBookings().size()
+        );
+    }
+}

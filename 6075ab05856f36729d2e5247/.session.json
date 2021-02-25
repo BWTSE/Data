@@ -1,0 +1,15 @@
+{
+    "signup_code": "cup-cd",
+    "background_answers": {
+        "education_level": "Master degree",
+        "education_field": "Information Technology / Interaction Design",
+        "work_experience": "2",
+        "work_experience_java": "2",
+        "work_domain": "Android",
+        "workplace_peer_review": true,
+        "workplace_pair_programming": false,
+        "workplace_td_tracking": true,
+        "workplace_coding_standards": false
+    },
+    "repeat_of": ""
+}

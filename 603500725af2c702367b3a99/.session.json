@@ -1,0 +1,15 @@
+{
+    "signup_code": "prestudy-students",
+    "background_answers": {
+        "education_level": "Some bachelor studies",
+        "education_field": "Software engingeering",
+        "work_experience": "0",
+        "work_experience_java": "0",
+        "work_domain": "None",
+        "workplace_peer_review": false,
+        "workplace_pair_programming": false,
+        "workplace_td_tracking": false,
+        "workplace_coding_standards": false
+    },
+    "repeat_of": ""
+}

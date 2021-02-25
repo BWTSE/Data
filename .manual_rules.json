@@ -1,0 +1,506 @@
+{
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck": {
+        "count": 23,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "File does not end with a newline.",
+        "ignored": true,
+        "ignored_comment": "Formatting that in many cases would have been solved by a propper IDE."
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.NoCodeInFileCheck": {
+        "count": 1,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "The file does not contain any code.",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck": {
+        "count": 901,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Annotation 'Override' should be on the same line with its target.",
+        "ignored": true,
+        "ignored_comment": "Cosmetic formatting rule."
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.DeclarationOrderCheck": {
+        "count": 2,
+        "severity": "INFO",
+        "type": "CODE_SMELL",
+        "example_message": "Variable access definition in wrong order.",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.MultipleVariableDeclarationsCheck": {
+        "count": 4,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "Each variable declaration must be in its own statement.",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck": {
+        "count": 4,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "Return count is 3 (max allowed for non-void methods/lambdas is 2).",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.coding.UnnecessaryParenthesesCheck": {
+        "count": 1,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Unnecessary parentheses around expression.",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck": {
+        "count": 1847,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Class 'Ticket' looks like designed for extension (can be subclassed), but the method 'getTicketType' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Ticket' final or making the method 'getTicketType' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "ignored": true,
+        "ignored_comment": "Rule is about javadoc."
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck": {
+        "count": 8,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "Variable 'room' must be private and have accessor methods.",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck": {
+        "count": 384,
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "example_message": "Missing an import control file.",
+        "ignored": true,
+        "ignored_comment": "Base project did not have an import control file and projects of this size does usually not have an import control file."
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportOrderCheck": {
+        "count": 7,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Wrong order for 'java.time.LocalDate' import.",
+        "ignored": true,
+        "ignored_comment": "Order of imports are often handled by the IDE"
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck": {
+        "count": 56,
+        "severity": "INFO",
+        "type": "CODE_SMELL",
+        "example_message": "Unused import - java.time.temporal.ChronoField.",
+        "ignored": true,
+        "ignored_comment": "The IDE usually assist the developer with removing unused imports."
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.indentation.CommentsIndentationCheck": {
+        "count": 5,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Block comment has incorrect indentation level 4, expected is 1, indentation should be the same level as line 76.",
+        "ignored": true,
+        "ignored_comment": "The IDE usually assists the user with indentation."
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck": {
+        "count": 112,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "'if' child has incorrect indentation level 12, expected level should be 16.",
+        "ignored": true,
+        "ignored_comment": "The IDE usually assists the user with indentation."
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck": {
+        "count": 45,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Missing package-info.java file.",
+        "ignored": true,
+        "ignored_comment": "Base project did not have a package-info.java file and projects of this size does usually not have a package-info.java file."
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck": {
+        "count": 404,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Type Javadoc comment is missing null tag.",
+        "ignored": true,
+        "ignored_comment": "Rule is about javadoc."
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.modifier.ClassMemberImpliedModifierCheck": {
+        "count": 20,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Implied modifier 'static' should be explicit.",
+        "ignored": true,
+        "ignored_comment": "A conflicting rule exists, indicating lack of consensus."
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.modifier.InterfaceMemberImpliedModifierCheck": {
+        "count": 206,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Implied modifier 'abstract' should be explicit.",
+        "ignored": true,
+        "ignored_comment": "A conflicting rule exists, indicating lack of consensus."
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.naming.AbstractClassNameCheck": {
+        "count": 2,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "Name 'Filter' must match pattern '^Abstract.+$'.",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck": {
+        "count": 52,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "Line is longer than 100 characters (found 111).",
+        "ignored": true,
+        "ignored_comment": "Using rule with 120 character limit instead."
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck": {
+        "count": 56,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "File contains tab characters (this is the first instance).",
+        "ignored": true,
+        "ignored_comment": "Cosmetic formatting rule."
+    },
+    "checkstyle:com.puppycrawl.tools.checkstyle.checks.whitespace.SingleSpaceSeparatorCheck": {
+        "count": 3,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "Use a single space to separate non-whitespace characters.",
+        "ignored": true,
+        "ignored_comment": "Cosmetic formatting rule."
+    },
+    "codehawk:AvoidUnutilizedAbstraction": {
+        "count": 33,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "It is Unutilized Abstraction",
+        "ignored": true,
+        "ignored_comment": "Rule seems broken and triggers even when the specified conditions are satisfied."
+    },
+    "codehawk:InsufficientModularation": {
+        "count": 125,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "This class has InsufficientModularation, there should be over 20 public interfaces, eihther over 30 methods, or has complexity count over 100 times.",
+        "ignored": true,
+        "ignored_comment": "Is almost impossible to not trigger in a system om this size."
+    },
+    "common-java:DuplicatedBlocks": {
+        "count": 17,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "1 duplicated blocks of code must be removed.",
+        "ignored": true,
+        "ignored_comment": "Duplication was checked manually."
+    },
+    "common-java:InsufficientCommentDensity": {
+        "count": 384,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "6 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "ignored": true,
+        "ignored_comment": "Documentation was checked manually."
+    },
+    "common-java:InsufficientLineCoverage": {
+        "count": 338,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "2 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "ignored": true,
+        "ignored_comment": "Test coverage was not measured."
+    },
+    "fb-contrib:FCCD_FIND_CLASS_CIRCULAR_DEPENDENCY": {
+        "count": 1,
+        "severity": "MAJOR",
+        "type": "BUG",
+        "example_message": "Class booking.ComputerClassRoom has a circular dependency with other classes",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "fb-contrib:NSE_NON_SYMMETRIC_EQUALS": {
+        "count": 8,
+        "severity": "MAJOR",
+        "type": "BUG",
+        "example_message": "Equals method tickets.TicketTypeSeasonalRestricted.equals(Object) compares this object against other types in a non symmetric way",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "fb-contrib:OCP_OVERLY_CONCRETE_PARAMETER": {
+        "count": 25,
+        "severity": "INFO",
+        "type": "CODE_SMELL",
+        "example_message": "booking.Interval.isDuring(LocalDateTime): 1st parameter '' could be declared as java.time.chrono.ChronoLocalDateTime instead",
+        "ignored": false,
+        "ignored_comment": "Rule is generally good even if it's wrong for the chronofield."
+    },
+    "fb-contrib:SEO_SUBOPTIMAL_EXPRESSION_ORDER": {
+        "count": 1,
+        "severity": "MAJOR",
+        "type": "BUG",
+        "example_message": "Method tickets.TicketTypeSeasonalRestricted.equals(Object) orders expressions in a conditional in a sub optimal way",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "fb-contrib:WOC_WRITE_ONLY_COLLECTION_FIELD": {
+        "count": 1,
+        "severity": "MAJOR",
+        "type": "BUG",
+        "example_message": "Class booking.ComputerClassRoom creates and initializes a collection but never reads or gains information from it",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "findbugs:BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS": {
+        "count": 3,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "Equals method for tickets.TicketTypeSeasonalRestricted assumes the argument is of type TicketTypeSeasonalRestricted",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "findbugs:EQ_CHECK_FOR_OPERAND_NOT_COMPATIBLE_WITH_THIS": {
+        "count": 9,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "tickets.TicketTypeSeasonalRestricted.equals(Object) checks for operand being a TicketTypeSeasonal",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "findbugs:EQ_DOESNT_OVERRIDE_EQUALS": {
+        "count": 16,
+        "severity": "INFO",
+        "type": "CODE_SMELL",
+        "example_message": "booking.ComputerClassRoom doesn't override ClassRoom.equals(Object)",
+        "ignored": true,
+        "ignored_comment": "Existance of equals method is checked manually."
+    },
+    "findbugs:NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT": {
+        "count": 2,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "tickets.TicketTypeSeasonalRestricted.equals(Object) does not check for null argument",
+        "ignored": true,
+        "ignored_comment": "There is another rule that triggers for all unchecked null access."
+    },
+    "findbugs:URF_UNREAD_FIELD": {
+        "count": 1,
+        "severity": "MAJOR",
+        "type": "BUG",
+        "example_message": "Unread field: booking.ComputerClassRoom.closes",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "java:S103": {
+        "count": 20,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "Split this 144 characters long line (which is greater than 120 authorized).",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "java:S105": {
+        "count": 56,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Replace all tab characters in this file by sequences of white-spaces.",
+        "ignored": true,
+        "ignored_comment": "Cosmetic formatting rule."
+    },
+    "java:S1067": {
+        "count": 4,
+        "severity": "CRITICAL",
+        "type": "CODE_SMELL",
+        "example_message": "Reduce the number of conditional operators (4) used in the expression (maximum allowed 3).",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "java:S1068": {
+        "count": 3,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "Remove this unused \"hO\" private field.",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "java:S1105": {
+        "count": 1,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Move this left curly brace to the end of previous line of code.",
+        "ignored": true,
+        "ignored_comment": "Cosmetic formatting rule."
+    },
+    "java:S1106": {
+        "count": 3457,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Move this left curly brace to the beginning of next line of code.",
+        "ignored": true,
+        "ignored_comment": "Cosmetic formatting rule."
+    },
+    "java:S1108": {
+        "count": 31,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Move this \"else\" keyword to a new dedicated line.",
+        "ignored": true,
+        "ignored_comment": "Cosmetic formatting rule."
+    },
+    "java:S1120": {
+        "count": 11,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Make this line start after 8 spaces to indent the code consistently.",
+        "ignored": true,
+        "ignored_comment": "The IDE usually assists the user with indentation."
+    },
+    "java:S1126": {
+        "count": 4,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Replace this if-then-else statement by a single return statement.",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "java:S1128": {
+        "count": 55,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Remove this unused import 'java.util.EnumSet'.",
+        "ignored": true,
+        "ignored_comment": "The IDE usually assist the developer with removing unused imports."
+    },
+    "java:S113": {
+        "count": 23,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Add a new line at the end of this file.",
+        "ignored": true,
+        "ignored_comment": "Formatting that in many cases would have been solved by a propper IDE."
+    },
+    "java:S1172": {
+        "count": 11,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "Remove this unused method parameter \"user\".",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "java:S118": {
+        "count": 2,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Rename this abstract class name to match the regular expression '^Abstract[A-Z][a-zA-Z0-9]*$'.",
+        "ignored": true,
+        "ignored_comment": "There is another rule adressing adbstract class naming."
+    },
+    "java:S1220": {
+        "count": 1,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Move this file to a named package.",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "java:S1228": {
+        "count": 45,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Add a 'package-info.java' file to document the '.submission/tickets' package",
+        "ignored": true,
+        "ignored_comment": "Base project did not have a package-info.java file and projects of this size does usually not have a package-info.java file."
+    },
+    "java:S125": {
+        "count": 1,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "This block of commented-out lines of code should be removed.",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "java:S1451": {
+        "count": 373,
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "example_message": "Add or update the header of this file.",
+        "ignored": true,
+        "ignored_comment": "Base project did not contain a file header."
+    },
+    "java:S1659": {
+        "count": 2,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Declare \"closesAt\" on a separate line.",
+        "ignored": true,
+        "ignored_comment": "There is another rule checking that variables are declared at separate lines."
+    },
+    "java:S1698": {
+        "count": 1,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "Use the \"equals\" method if value comparison was intended.",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "java:S2039": {
+        "count": 4,
+        "severity": "MINOR",
+        "type": "VULNERABILITY",
+        "example_message": "Explicitly declare the visibility for \"start\".",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "java:S2097": {
+        "count": 1,
+        "severity": "MINOR",
+        "type": "BUG",
+        "example_message": "Add a type test to this method.",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "java:S2159": {
+        "count": 25,
+        "severity": "MAJOR",
+        "type": "BUG",
+        "example_message": "Remove this call to \"equals\"; comparisons between unrelated types always return false.",
+        "ignored": true,
+        "ignored_comment": "Rule is broken and reports false positives."
+    },
+    "java:S2259": {
+        "count": 3,
+        "severity": "MAJOR",
+        "type": "BUG",
+        "example_message": "A \"NullPointerException\" could be thrown; \"o\" is nullable here.",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "java:S2309": {
+        "count": 1,
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "example_message": "This file has 0 lines of code.",
+        "ignored": true,
+        "ignored_comment": "Another rule exists that checks for empty files."
+    },
+    "java:S4274": {
+        "count": 1,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "Replace this assert with a proper check.",
+        "ignored": false,
+        "ignored_comment": ""
+    },
+    "java:S864": {
+        "count": 1,
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "example_message": "Add parentheses to make the operator precedence explicit.",
+        "ignored": false,
+        "ignored_comment": ""
+    }
+}

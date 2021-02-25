@@ -1,0 +1,53 @@
+diff -rdBEZN ../../../Scenarios/tickets/low_debt/tickets/TicketTypeSeasonalRestricted.java .submission/tickets/TicketTypeSeasonalRestricted.java
+0a1,51
+> package tickets;
+> 
+> import java.util.Objects;
+> import java.util.Set;
+> 
+> public class TicketTypeSeasonalRestricted extends TicketType {
+> 
+>     private final Season validSeason;
+>     
+>     private final Set<User.Occupation> validOccupations;
+> 
+>     public TicketTypeSeasonalRestricted(String name, double price, Set<Zone> validZones, Season validSeason, Set<User.Occupation> validOccupations) {
+>         super(name, price, validZones);
+>         this.validSeason = validSeason;
+> 		this.validOccupations = validOccupations;
+>     }
+> 
+>     /*
+>     Make sure that the trip is during the correct season.
+>      */
+>     @Override
+>     public boolean isValidFor(Trip trip, User user) {
+>         return super.isValidFor(trip, user)
+>             && this.getValidSeason().isDateWithin(trip.getTripStartTime())
+>             && this.getValidOccupations().contains(user.getOccupation());
+>     }
+> 
+>     public Season getValidSeason() {
+>         return this.validSeason;
+>     }
+> 
+> 	public Set<User.Occupation> getValidOccupations() {
+> 		return this.validOccupations;
+> 	}
+> 
+>     @Override
+>     public boolean equals(Object o) {
+>         boolean equalSeason = Objects.equals(this.getValidSeason(), ((TicketTypeSeasonalRestricted) o).getValidSeason());
+>         boolean equalOccupations = this.getValidOccupations().equals(((TicketTypeSeasonalRestricted) o).getValidOccupations());
+>         return super.equals(o)
+>             && equalSeason
+>             && equalOccupations;
+>     }
+> 
+>     @Override
+>     public int hashCode() {
+>         return Objects.hash(
+>             super.hashCode(), this.getValidSeason(), this.getValidOccupations()
+>         );
+>     }
+> }

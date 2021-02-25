@@ -1,0 +1,65 @@
+diff -rdBEZN ../../../Scenarios/booking/high_debt/booking/ClassRoom.java .submission/booking/ClassRoom.java
+12,13c12,13
+<     private final String n;
+<     private final String d;
+---
+>     private final String name;
+>     private final String description;
+19,21c19,21
+<     public ClassRoom(String n, String d, boolean p) {
+<         this.n = n;
+<         this.d = d;
+---
+>     public ClassRoom(String name, String description, boolean p) {
+>         this.name = name;
+>         this.description = description;
+26c26
+<         return this.n;
+---
+>         return this.name;
+30c30
+<         return this.d;
+---
+>         return this.description;
+diff -rdBEZN ../../../Scenarios/booking/high_debt/booking/ComputerClassRoom.java .submission/booking/ComputerClassRoom.java
+0a1,39
+> 
+> package booking;
+> 
+> import java.time.LocalDateTime;
+> import java.time.temporal.ChronoField;
+> import java.util.LinkedList;
+> import java.util.List;
+> import java.util.Objects;
+> import java.util.Optional;
+> 
+> public class ComputerClassRoom extends ClassRoom {
+> 	
+> 	private int opens, closes;
+> 	
+> 	public ComputerClassRoom(
+> 		String name, 
+> 		String description, 
+> 		boolean hasProjector, 
+> 		int opens, 
+> 		int closes
+> 	) {
+> 		super(name, description, hasProjector);
+> 		this.opens = opens;
+> 		this.closes = closes;
+> 	}
+> 	
+>     @Override
+> 	public Optional<Booking> book(Interval interval, User user) {
+>         if (interval.getStart().getHour() < opens) {
+>         	return Optional.empty();
+>         }
+>         
+>         if (interval.getEnd().getHour() < opens) {
+>         	return Optional.empty();
+>         }
+> 
+>         return super.book(interval, user);
+>     }
+> }
+\ No newline at end of file

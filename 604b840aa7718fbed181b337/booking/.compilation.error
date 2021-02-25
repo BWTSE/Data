@@ -1,0 +1,12 @@
+exit code: 1
+booking/Main.java:20: error: cannot find symbol
+    private static final ComputerClassRoom computerRoom = new ComputerClassRoom("J029", "in Jupiter", false, 7, 17);
+                         ^
+  symbol:   class ComputerClassRoom
+  location: class Main
+booking/Main.java:20: error: cannot find symbol
+    private static final ComputerClassRoom computerRoom = new ComputerClassRoom("J029", "in Jupiter", false, 7, 17);
+                                                              ^
+  symbol:   class ComputerClassRoom
+  location: class Main
+2 errors

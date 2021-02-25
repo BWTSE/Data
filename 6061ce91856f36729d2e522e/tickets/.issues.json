@@ -1,0 +1,1658 @@
+[
+    {
+        "rule": "java:S1228",
+        "file": "tickets-low-6061ce91856f36729d2e522e",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Add a 'package-info.java' file to document the '.submission/tickets' package",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "Season.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "2 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "Season.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "6 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "java:S1451",
+        "file": "Season.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck",
+        "file": "Season.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Missing package-info.java file.",
+        "line": 1
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "Season.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Season.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 8
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "Season.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 8
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Season.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 16
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Season.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 20
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "Ticket.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "15 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "Ticket.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "18 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "java:S1451",
+        "file": "Ticket.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "Ticket.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 7
+    },
+    {
+        "rule": "codehawk:InsufficientModularation",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "This class has InsufficientModularation, there should be over 20 public interfaces, eihther over 30 methods, or has complexity count over 100 times.",
+        "line": 7
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 7
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 12
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 18
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Ticket' looks like designed for extension (can be subclassed), but the method 'getTicketType' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Ticket' final or making the method 'getTicketType' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 18
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 22
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Ticket' looks like designed for extension (can be subclassed), but the method 'getUser' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Ticket' final or making the method 'getUser' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 22
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 26
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Ticket' looks like designed for extension (can be subclassed), but the method 'getTimeOfPurchase' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Ticket' final or making the method 'getTimeOfPurchase' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 26
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 30
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Ticket' looks like designed for extension (can be subclassed), but the method 'isValidFor' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Ticket' final or making the method 'isValidFor' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 30
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 34
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Ticket' looks like designed for extension (can be subclassed), but the method 'equals' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Ticket' final or making the method 'equals' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 34
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 35
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 36
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 40
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 50
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Ticket' looks like designed for extension (can be subclassed), but the method 'hashCode' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Ticket' final or making the method 'hashCode' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 50
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 51
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 55
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Ticket' looks like designed for extension (can be subclassed), but the method 'toString' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Ticket' final or making the method 'toString' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 55
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Ticket.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 56
+    },
+    {
+        "rule": "java:S1451",
+        "file": "TicketFinder.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "TicketFinder.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "13 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "TicketFinder.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "14 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "TicketFinder.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "codehawk:AvoidUnutilizedAbstraction",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "It is Unutilized Abstraction",
+        "line": 9
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 9
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 9
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 13
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketFinder' looks like designed for extension (can be subclassed), but the method 'find' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketFinder' final or making the method 'find' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 17
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 17
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 20
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 22
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketFinder' looks like designed for extension (can be subclassed), but the method 'find' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketFinder' final or making the method 'find' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 30
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 30
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 33
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 34
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketFinder' looks like designed for extension (can be subclassed), but the method 'purchaseTicket' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketFinder' final or making the method 'purchaseTicket' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 42
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 42
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 43
+    },
+    {
+        "rule": "java:S1108",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this \"else\" keyword to a new dedicated line.",
+        "line": 45
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 45
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 50
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketFinder.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketFinder' looks like designed for extension (can be subclassed), but the method 'getTicketTypes' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketFinder' final or making the method 'getTicketTypes' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 50
+    },
+    {
+        "rule": "java:S1451",
+        "file": "TicketType.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "TicketType.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "13 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "TicketType.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "15 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "TicketType.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "codehawk:InsufficientModularation",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "This class has InsufficientModularation, there should be over 20 public interfaces, eihther over 30 methods, or has complexity count over 100 times.",
+        "line": 7
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 7
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 7
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 12
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketType' looks like designed for extension (can be subclassed), but the method 'getName' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketType' final or making the method 'getName' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 18
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 18
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketType' looks like designed for extension (can be subclassed), but the method 'getPrice' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketType' final or making the method 'getPrice' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 22
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 22
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketType' looks like designed for extension (can be subclassed), but the method 'getValidZones' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketType' final or making the method 'getValidZones' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 26
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 26
+    },
+    {
+        "rule": "java:S1172",
+        "file": "TicketType.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "Remove this unused method parameter \"user\".",
+        "line": 33
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketType' looks like designed for extension (can be subclassed), but the method 'isValidFor' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketType' final or making the method 'isValidFor' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 33
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 33
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 38
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketType' looks like designed for extension (can be subclassed), but the method 'equals' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketType' final or making the method 'equals' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 38
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 39
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 40
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 44
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 54
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketType' looks like designed for extension (can be subclassed), but the method 'hashCode' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketType' final or making the method 'hashCode' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 54
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 55
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 59
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketType' looks like designed for extension (can be subclassed), but the method 'toString' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketType' final or making the method 'toString' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 59
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketType.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 60
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "7 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "9 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "java:S1451",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 6
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 6
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 10
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 18
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketTypeSeasonal' looks like designed for extension (can be subclassed), but the method 'isValidFor' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketTypeSeasonal' final or making the method 'isValidFor' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 18
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 19
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 24
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketTypeSeasonal' looks like designed for extension (can be subclassed), but the method 'getValidSeason' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketTypeSeasonal' final or making the method 'getValidSeason' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 24
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 28
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketTypeSeasonal' looks like designed for extension (can be subclassed), but the method 'equals' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketTypeSeasonal' final or making the method 'equals' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 28
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 29
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 34
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketTypeSeasonal' looks like designed for extension (can be subclassed), but the method 'hashCode' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketTypeSeasonal' final or making the method 'hashCode' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 34
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSeasonal.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 35
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "7 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "10 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "java:S1451",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 7
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 7
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 11
+    },
+    {
+        "rule": "java:S103",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "Split this 148 characters long line (which is greater than 120 authorized).",
+        "line": 11
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "Line is longer than 100 characters (found 148).",
+        "line": 11
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 16
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketTypeSeasonalRestricted' looks like designed for extension (can be subclassed), but the method 'isValidFor' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketTypeSeasonalRestricted' final or making the method 'isValidFor' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 16
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 17
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 22
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketTypeSeasonalRestricted' looks like designed for extension (can be subclassed), but the method 'getValidOcupations' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketTypeSeasonalRestricted' final or making the method 'getValidOcupations' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 22
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 26
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketTypeSeasonalRestricted' looks like designed for extension (can be subclassed), but the method 'equals' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketTypeSeasonalRestricted' final or making the method 'equals' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 26
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 27
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "Line is longer than 100 characters (found 114).",
+        "line": 29
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 32
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketTypeSeasonalRestricted' looks like designed for extension (can be subclassed), but the method 'hashCode' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketTypeSeasonalRestricted' final or making the method 'hashCode' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 32
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSeasonalRestricted.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 33
+    },
+    {
+        "rule": "java:S1451",
+        "file": "TicketTypeSingle.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "TicketTypeSingle.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "12 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "TicketTypeSingle.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "16 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "TicketTypeSingle.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 6
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 6
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 17
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 26
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketTypeSingle' looks like designed for extension (can be subclassed), but the method 'isValidFor' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketTypeSingle' final or making the method 'isValidFor' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 26
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 27
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 28
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 33
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 43
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketTypeSingle' looks like designed for extension (can be subclassed), but the method 'getStartHour' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketTypeSingle' final or making the method 'getStartHour' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 43
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 47
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketTypeSingle' looks like designed for extension (can be subclassed), but the method 'getEndHour' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketTypeSingle' final or making the method 'getEndHour' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 47
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 51
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketTypeSingle' looks like designed for extension (can be subclassed), but the method 'equals' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketTypeSingle' final or making the method 'equals' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 51
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 52
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 58
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'TicketTypeSingle' looks like designed for extension (can be subclassed), but the method 'hashCode' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'TicketTypeSingle' final or making the method 'hashCode' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 58
+    },
+    {
+        "rule": "java:S1106",
+        "file": "TicketTypeSingle.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 59
+    },
+    {
+        "rule": "java:S1451",
+        "file": "Trip.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "Trip.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "15 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "Trip.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "17 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "Trip.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 7
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 7
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 13
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Trip' looks like designed for extension (can be subclassed), but the method 'getStartZone' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Trip' final or making the method 'getStartZone' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 19
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 19
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Trip' looks like designed for extension (can be subclassed), but the method 'getEndZone' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Trip' final or making the method 'getEndZone' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 23
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 23
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Trip' looks like designed for extension (can be subclassed), but the method 'getTripStartTime' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Trip' final or making the method 'getTripStartTime' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 27
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 27
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Trip' looks like designed for extension (can be subclassed), but the method 'equals' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Trip' final or making the method 'equals' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 31
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 31
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 32
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 33
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 37
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 47
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Trip' looks like designed for extension (can be subclassed), but the method 'hashCode' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Trip' final or making the method 'hashCode' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 47
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 48
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 52
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'Trip' looks like designed for extension (can be subclassed), but the method 'toString' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'Trip' final or making the method 'toString' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 52
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Trip.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 53
+    },
+    {
+        "rule": "common-java:InsufficientLineCoverage",
+        "file": "User.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "12 more lines of code need to be covered by tests to reach the minimum threshold of 65.0% lines coverage.",
+        "line": 0
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "User.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "17 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "java:S1451",
+        "file": "User.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "User.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 5
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 5
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 7
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 7
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.modifier.ClassMemberImpliedModifierCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Implied modifier 'static' should be explicit.",
+        "line": 7
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 18
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 25
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'User' looks like designed for extension (can be subclassed), but the method 'getName' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'User' final or making the method 'getName' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 25
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 29
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'User' looks like designed for extension (can be subclassed), but the method 'getEmail' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'User' final or making the method 'getEmail' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 29
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 33
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'User' looks like designed for extension (can be subclassed), but the method 'getAge' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'User' final or making the method 'getAge' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 33
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 37
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'User' looks like designed for extension (can be subclassed), but the method 'getOccupation' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'User' final or making the method 'getOccupation' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 37
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 41
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'User' looks like designed for extension (can be subclassed), but the method 'equals' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'User' final or making the method 'equals' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 41
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 42
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 43
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 47
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 55
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'User' looks like designed for extension (can be subclassed), but the method 'hashCode' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'User' final or making the method 'hashCode' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 55
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 56
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.annotation.AnnotationOnSameLineCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Annotation 'Override' should be on the same line with its target.",
+        "line": 60
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.design.DesignForExtensionCheck",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Class 'User' looks like designed for extension (can be subclassed), but the method 'toString' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'User' final or making the method 'toString' static/final/abstract/empty, or adding allowed annotation for the method.",
+        "line": 60
+    },
+    {
+        "rule": "java:S1106",
+        "file": "User.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 61
+    },
+    {
+        "rule": "common-java:InsufficientCommentDensity",
+        "file": "Zone.java",
+        "severity": "MAJOR",
+        "type": "CODE_SMELL",
+        "message": "2 more comment lines need to be written to reach the minimum threshold of 25.0% comment density.",
+        "line": 0
+    },
+    {
+        "rule": "java:S1451",
+        "file": "Zone.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Add or update the header of this file.",
+        "line": 0
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.imports.ImportControlCheck",
+        "file": "Zone.java",
+        "severity": "BLOCKER",
+        "type": "CODE_SMELL",
+        "message": "Missing an import control file.",
+        "line": 1
+    },
+    {
+        "rule": "java:S1106",
+        "file": "Zone.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Move this left curly brace to the beginning of next line of code.",
+        "line": 3
+    },
+    {
+        "rule": "checkstyle:com.puppycrawl.tools.checkstyle.checks.javadoc.WriteTagCheck",
+        "file": "Zone.java",
+        "severity": "MINOR",
+        "type": "CODE_SMELL",
+        "message": "Type Javadoc comment is missing null tag.",
+        "line": 3
+    }
+]

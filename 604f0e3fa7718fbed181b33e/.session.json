@@ -1,0 +1,15 @@
+{
+    "signup_code": "light-card",
+    "background_answers": {
+        "education_level": "Master degree",
+        "education_field": "Computer science",
+        "work_experience": "1",
+        "work_experience_java": "1",
+        "work_domain": "telecom",
+        "workplace_peer_review": false,
+        "workplace_pair_programming": false,
+        "workplace_td_tracking": false,
+        "workplace_coding_standards": false
+    },
+    "repeat_of": ""
+}

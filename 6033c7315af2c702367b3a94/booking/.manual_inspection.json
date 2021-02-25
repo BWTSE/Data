@@ -1,0 +1,57 @@
+{
+    "task_completion": "Invalid solution",
+    "reused_logic_constructor": false,
+    "reused_logic_validation": false,
+    "reused_logic_equals": false,
+    "reused_logic_hashcode": false,
+    "copied_variable_names_all": [
+        "n",
+        "d",
+        "p",
+        "bs",
+        "n",
+        "d",
+        "p",
+        "interval",
+        "booking",
+        "i",
+        "u",
+        "b",
+        "u",
+        "b",
+        "o"
+    ],
+    "copied_variable_names_bad": [
+        "n",
+        "d",
+        "p",
+        "bs",
+        "n",
+        "d",
+        "p",
+        "i",
+        "u",
+        "b",
+        "u",
+        "b"
+    ],
+    "new_variable_names_all": [
+        "hO",
+        "hC",
+        "hO",
+        "hC"
+    ],
+    "new_variable_names_bad": [
+        "hO",
+        "hC",
+        "hO",
+        "hC"
+    ],
+    "edited_variable_names_all": [],
+    "edited_variable_names_bad": [],
+    "has_equals": false,
+    "has_hashcode": false,
+    "documentation_state": "Incorrect",
+    "large_structure_change": false,
+    "inspection_done": true
+}

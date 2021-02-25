@@ -1,0 +1,15 @@
+{
+    "signup_code": "ring-button",
+    "background_answers": {
+        "education_level": "Master degree",
+        "education_field": "electrical engineering",
+        "work_experience": "6",
+        "work_experience_java": "4",
+        "work_domain": "webb",
+        "workplace_peer_review": true,
+        "workplace_pair_programming": false,
+        "workplace_td_tracking": false,
+        "workplace_coding_standards": false
+    },
+    "repeat_of": ""
+}
