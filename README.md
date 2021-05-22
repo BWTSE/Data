@@ -1,8 +1,8 @@
-# Broken Window Investigation: Annotated dataset
+# Broken Windows Investigation: Annotated dataset
 
-This repository contains annotated data related to the *Broken Window Investigation* thesis conducted by [Hampus Broman](https://github.com/HBroman) and [William Levén](https://github.com/williamleven)
+This repository contains annotated data related to the *Broken Windows Investigation* thesis conducted by [Hampus Broman](https://github.com/HBroman) and [William Levén](https://github.com/williamleven)
 
-Read the *Broken window Investigation* thesis for more information about the procedure used to collect and annotate this data.
+Read the *Broken windows Investigation* thesis for more information about the procedure used to collect and annotate this data.
  
 ## Repository content
 
@@ -27,3 +27,5 @@ Read the *Broken window Investigation* thesis for more information about the pro
 ## Notes
 1. Some personal comments submitted by participants has been removed from the dataset (2 instances).
 2. Annotation is not guaranteed to be complete in cases where the submission wasn't approved.
+
+If you have any questions or feel that anything is amiss, please [open an issue](https://github.com/BrokenWindowsInvestigation/Data/issues).
