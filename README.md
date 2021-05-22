@@ -1,5 +1,7 @@
 # Broken Windows Investigation: Annotated dataset
 
+[![DOI](https://zenodo.org/badge/342301067.svg)](https://zenodo.org/badge/latestdoi/342301067)
+
 This repository contains annotated data related to the *Broken Windows Investigation* thesis conducted by [Hampus Broman](https://github.com/HBroman) and [William Levén](https://github.com/williamleven)
 
 Read the *Broken windows Investigation* thesis for more information about the procedure used to collect and annotate this data.
