@@ -5,7 +5,7 @@
 This repository contains annotated data related to the thesis [*The Broken Windows Theory in Software Engineering: An experiment on technical debt propagation*](https://doi.org/10.5281/zenodo.4812956) conducted by [Hampus Broman](https://github.com/HBroman) and [William Levén](https://github.com/williamleven) in 2021.
 
 Read the thesis for more information about the procedure used to collect and annotate this data.
- 
+
 ## Repository content
 
 * `README.md` contains some general information about this data repository.
@@ -24,8 +24,7 @@ Read the thesis for more information about the procedure used to collect and ann
         * `.sonarscanner[.error]` contains the log output from running the `sonar-scanner` utility on the system. The suffix indicates if there were any errors.
         * `.issues.json` issues encountered while scanning the system with SonarQube.
         * `.submission` contains the complete system submitted by the participant.
-    
-    
+
 ## Notes
 1. Some personal comments submitted by participants has been removed from the dataset (2 instances).
 2. Annotation is not guaranteed to be complete in cases where no code was submitted.
