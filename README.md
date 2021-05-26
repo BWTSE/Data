@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/342301067.svg)](https://zenodo.org/badge/latestdoi/342301067)
 
-This repository contains annotated data related to the *Broken Windows Investigation* thesis conducted by [Hampus Broman](https://github.com/HBroman) and [William Levén](https://github.com/williamleven)
+This repository contains annotated data related to the thesis [*The Broken Windows Theory in Software Engineering: An experiment on technical debt propagation*](https://doi.org/10.5281/zenodo.4812956) conducted by [Hampus Broman](https://github.com/HBroman) and [William Levén](https://github.com/williamleven) in 2021.
 
 Read the *Broken windows Investigation* thesis for more information about the procedure used to collect and annotate this data.
  
