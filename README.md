@@ -30,4 +30,4 @@ Read the *Broken windows Investigation* thesis for more information about the pr
 1. Some personal comments submitted by participants has been removed from the dataset (2 instances).
 2. Annotation is not guaranteed to be complete in cases where no code was submitted.
 
-If you have any questions or feel that anything is amiss, please [open an issue](https://github.com/BrokenWindowsInvestigation/Data/issues).
+If you have any questions or feel that anything is amiss, please [open an issue](https://github.com/BWTSE/Data/issues).
