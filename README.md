@@ -1,4 +1,4 @@
-# Broken Windows Investigation: Annotated dataset
+# Annotated dataset
 
 [![DOI](https://zenodo.org/badge/342301067.svg)](https://zenodo.org/badge/latestdoi/342301067)
 
